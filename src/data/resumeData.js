@@ -9,7 +9,7 @@ const resumeData = {
   github: "github.com/anujva",
 
   summary:
-    "Staff Engineer with over 15 years of experience in distributed systems, platform engineering, and developer experience. Promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then transitioned to lead AI-driven developer productivity. Expert in cloud infrastructure, service mesh architecture, real-time data pipelines, and agentic AI tooling.",
+    "Staff Engineer, 15+ years building distributed systems and platform infrastructure. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, real-time data pipelines, and more recently agentic AI tooling.",
 
   skills: {
     "Programming Languages": [
@@ -66,11 +66,11 @@ const resumeData = {
       location: "Remote",
       date: "2022 - Present",
       bullets: [
-        "Leading Thumbtack's AI transformation of the SDLC: introduced 6 agentic coding tools (GitHub Copilot Agents, Roo Code, Claude Code, OpenCode, Augment, Codex) achieving 96%+ developer adoption in the first rollout.",
-        "Built a cross-tool shim layer that translates engineering best practices (skills and scripts) once and applies them across all agentic tools, eliminating per-tool configuration overhead.",
-        "Built an AI Slack bot for cross-codebase Q&A, change request creation, and automated code reviews, reducing context-switching time for engineers.",
-        "Evangelizing AI-driven development and building an internal course on building AI systems at Thumbtack.",
-        "Designed and implemented an isolated cloud development environment that allows engineers to spin up resources like PostgreSQL instances with one click and generate shareable demo URLs, reducing environment setup time from days to minutes and increasing feature demo frequency by 40%.",
+        "Rolled out 6 agentic coding tools (GitHub Copilot Agents, Roo Code, Claude Code, OpenCode, Augment, Codex) across Thumbtack engineering. Hit 96%+ developer adoption in the first rollout.",
+        "Built a cross-tool shim layer that translates engineering best practices (skills and scripts) once and applies them across all agentic tools, so we don't have to configure each tool separately.",
+        "Built an AI Slack bot for cross-codebase Q&A, change request creation, and automated code reviews.",
+        "Teaching AI-driven development internally and building a course on building AI systems at Thumbtack.",
+        "Built an isolated cloud dev environment where engineers spin up resources like PostgreSQL with one click and get shareable demo URLs. Cut environment setup from days to minutes; feature demo frequency went up 40%.",
       ],
     },
     {
@@ -81,12 +81,12 @@ const resumeData = {
       bullets: [
         "Led zero-downtime migration from self-hosted EC2 PostgreSQL to Aurora using bidirectional logical replication via AWS DMS. Updated PostgreSQL client libraries across PHP, Golang, Python, and Scala services.",
         "Built Thumbtack's real-time streaming infrastructure: Kafka Connect on self-managed ECS capturing CDC events via WAL from Aurora, with kafka-connect-bigquery writing events to BigQuery in real time.",
-        "Migrated all data pipelines to Aurora without downtime by orchestrating Aurora FastClone creation through Airflow, ensuring zero load on production databases during migration.",
-        "Architected service mesh using Envoy, enabling engineers to spin up network-isolated instances of their microservices in dev/staging without running the full 40+ service stack. Extended with Aurora FastClones for per-engineer database isolation.",
-        "Reduced latency from 500+ms to 30ms p99 for a critical findUsers API, resulting in 15% improvement in overall application responsiveness and 22% increase in user engagement metrics.",
-        "Developed a load testing tool in Go that reduced test implementation time by 70% and uncovered performance bottlenecks leading to 40% improvement in system throughput.",
-        "Implemented resilient multi-cloud infrastructure across AWS and GCP using Terraform and Puppet, achieving 35% cost reduction and improving disaster recovery response time from hours to minutes.",
-        "Successfully migrated a high QPS service (5k+ TCP calls/sec) with near-zero downtime (<50ms), preserving 99.999% of user sessions during the transition.",
+        "Migrated all data pipelines to Aurora without downtime by orchestrating Aurora FastClone creation through Airflow. Production databases took zero load during the migration.",
+        "Architected service mesh using Envoy so engineers could spin up network-isolated instances of their microservices in dev/staging without running the full 40+ service stack. Extended with Aurora FastClones for per-engineer database isolation.",
+        "Dropped latency on a critical findUsers API from 500+ms to 30ms p99. Overall application responsiveness improved 15%, and user engagement went up 22%.",
+        "Wrote a load testing tool in Go that cut test implementation time by 70% and surfaced bottlenecks that led to 40% higher system throughput.",
+        "Set up multi-cloud infrastructure across AWS and GCP with Terraform and Puppet. Cut costs 35% and brought disaster recovery response time from hours to minutes.",
+        "Migrated a high QPS service (5k+ TCP calls/sec) with near-zero downtime (<50ms). 99.999% of user sessions stayed intact.",
       ],
     },
     {
@@ -120,7 +120,7 @@ const resumeData = {
       date: "2014 - 2016",
       bullets: [
         "Implemented WebSocket capability for low-latency updates on dynamic UI components (dashboards, graphs, charts).",
-        "Integrated SAML SSO capabilities into the application, enhancing security and user experience.",
+        "Integrated SAML SSO into the application for single sign-on across customer deployments.",
         "Designed and developed Grails application for simulating real-time log feeds of different SIEM logging solutions.",
         "Implemented clustering algorithm to identify beaconing behavior of network endpoints for security monitoring.",
         "Created a framework in Java for programmatic Spark job submissions in YARN cluster mode in fully kerberized environments.",
