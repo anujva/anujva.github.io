@@ -1,4 +1,5 @@
 import resumeData from "../data/resumeData";
+import { decode } from "../utils/obfuscate";
 import {
   MapPin,
   Mail,
@@ -11,6 +12,7 @@ import "./About.css";
 
 export default function About() {
   const d = resumeData;
+  const email = decode(d.email);
   return (
     <div className="about-page">
       <section className="hero">
@@ -20,7 +22,7 @@ export default function About() {
           <h2 className="hero-title">{d.title}</h2>
           <p className="hero-summary">{d.summary}</p>
           <div className="hero-links">
-            <a href={`mailto:${d.email}`} className="hero-btn primary">
+            <a href={`mailto:${email}`} className="hero-btn primary">
               <Mail size={16} /> Get in Touch
             </a>
             <a href="#/resume" className="hero-btn secondary">

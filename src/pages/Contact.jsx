@@ -1,9 +1,12 @@
 import resumeData from "../data/resumeData";
+import { decode } from "../utils/obfuscate";
 import { Mail, Linkedin, Github, MapPin, Phone } from "lucide-react";
 import "./Contact.css";
 
 export default function Contact() {
   const d = resumeData;
+  const email = decode(d.email);
+  const phone = decode(d.phone);
   return (
     <div className="contact-page">
       <h2>Get in Touch</h2>
@@ -13,10 +16,10 @@ export default function Contact() {
         the channels below.
       </p>
       <div className="contact-grid">
-        <a href={`mailto:${d.email}`} className="contact-card">
+        <a href={`mailto:${email}`} className="contact-card">
           <Mail size={24} />
           <h3>Email</h3>
-          <span>{d.email}</span>
+          <span>{email}</span>
         </a>
         <a
           href={`https://${d.linkedin}`}
@@ -41,7 +44,7 @@ export default function Contact() {
         <div className="contact-card">
           <Phone size={24} />
           <h3>Phone</h3>
-          <span>{d.phone}</span>
+          <span>{phone}</span>
         </div>
         <div className="contact-card">
           <MapPin size={24} />

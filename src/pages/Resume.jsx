@@ -1,11 +1,14 @@
 import { useRef } from "react";
 import resumeData from "../data/resumeData";
+import { decode } from "../utils/obfuscate";
 import { Download } from "lucide-react";
 import "./Resume.css";
 
 export default function Resume() {
   const resumeRef = useRef(null);
   const d = resumeData;
+  const email = decode(d.email);
+  const phone = decode(d.phone);
 
   const handleDownload = async () => {
     const html2pdf = (await import("html2pdf.js")).default;
@@ -52,11 +55,11 @@ export default function Resume() {
             <div className="contact-list">
               <div className="contact-item">
                 <span className="contact-label">Phone</span>
-                <span>{d.phone}</span>
+                <span>{phone}</span>
               </div>
               <div className="contact-item">
                 <span className="contact-label">Email</span>
-                <span>{d.email}</span>
+                <span>{email}</span>
               </div>
               <div className="contact-item">
                 <span className="contact-label">LinkedIn</span>

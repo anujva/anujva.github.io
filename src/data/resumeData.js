@@ -2,8 +2,9 @@ const resumeData = {
   name: "Anuj Varma",
   title: "Staff Software Engineer",
   location: "Seattle, WA",
-  phone: "925-640-7711",
-  email: "anujva@gmail.com",
+  // obfuscated: base64(reverse(plaintext)) — see src/utils/obfuscate.js
+  phone: "MTE3Ny0wNDYtNTI5",
+  email: "bW9jLmxpYW1nQGF2anVuYQ==",
   linkedin: "linkedin.com/in/anuj-varma-6b625520",
   github: "github.com/anujva",
 
