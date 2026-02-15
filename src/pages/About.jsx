@@ -31,19 +31,15 @@ export default function About() {
           </div>
         </div>
         <div className="hero-aside">
-          <div className="hero-card">
-            <div className="hero-stat">
-              <span className="stat-number">15+</span>
-              <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="hero-stat">
-              <span className="stat-number">5</span>
-              <span className="stat-label">Companies</span>
-            </div>
-            <div className="hero-stat">
-              <span className="stat-number">96%</span>
-              <span className="stat-label">AI Tool Adoption</span>
-            </div>
+          <div className="hero-highlights">
+            <h4>Career Highlights</h4>
+            <ul className="highlights-list">
+              <li>Drove 96% adoption of AI coding tools across Thumbtack engineering</li>
+              <li>Led zero-downtime migration from EC2 PostgreSQL to Aurora</li>
+              <li>Built real-time streaming infra with Kafka Connect and BigQuery</li>
+              <li>Dropped a critical API from 500ms to 30ms p99</li>
+              <li>15+ years across infrastructure, SRE, and developer experience</li>
+            </ul>
           </div>
           <div className="hero-details">
             <div className="detail-item">
