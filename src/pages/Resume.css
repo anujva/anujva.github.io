@@ -1,0 +1,313 @@
+.resume-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.resume-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.resume-toolbar h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--btn-primary-bg);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* Paper container */
+.resume-paper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px var(--card-shadow);
+  min-height: 11in;
+}
+
+/* Sidebar */
+.resume-sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 2rem 1.5rem;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--sidebar-divider);
+}
+
+.sidebar-name {
+  font-family: "Inter", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.sidebar-title {
+  font-size: 0.9rem;
+  color: var(--sidebar-heading);
+  font-weight: 500;
+}
+
+.sidebar-section {
+  margin-bottom: 1.75rem;
+}
+
+.sidebar-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--sidebar-heading);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--sidebar-divider);
+}
+
+/* Contact in sidebar */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--sidebar-heading);
+}
+
+.contact-item span:last-child {
+  font-size: 0.85rem;
+  color: var(--sidebar-text);
+  word-break: break-all;
+}
+
+/* Skills in sidebar */
+.skill-group {
+  margin-bottom: 1rem;
+}
+
+.skill-category-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--sidebar-muted);
+  margin-bottom: 0.4rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.skill-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--sidebar-tag-bg);
+  border: 1px solid var(--sidebar-tag-border);
+  border-radius: 4px;
+  color: var(--sidebar-text);
+}
+
+/* Languages */
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.language-name {
+  font-size: 0.85rem;
+  color: var(--sidebar-text);
+}
+
+.language-level {
+  font-size: 0.75rem;
+  color: var(--sidebar-heading);
+  font-weight: 500;
+}
+
+/* Education in sidebar */
+.edu-item-sidebar {
+  margin-bottom: 1rem;
+}
+
+.edu-degree-sidebar {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 0.15rem;
+}
+
+.edu-school-sidebar {
+  font-size: 0.78rem;
+  color: var(--sidebar-muted);
+}
+
+.edu-date-sidebar {
+  font-size: 0.72rem;
+  color: var(--sidebar-heading);
+  font-style: italic;
+}
+
+/* Main content */
+.resume-main {
+  padding: 2rem 2rem 2rem 2.25rem;
+}
+
+.main-section {
+  margin-bottom: 1.75rem;
+}
+
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-icon {
+  font-size: 0.6rem;
+  color: var(--accent);
+}
+
+.profile-text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* Job entries */
+.job-entry {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.job-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.job-title {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+
+.job-company {
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+.job-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.job-bullets {
+  padding-left: 1.25rem;
+  margin: 0;
+  list-style: disc;
+}
+
+.job-bullets li {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+/* Print/PDF-specific styles */
+@media print {
+  .resume-page {
+    padding: 0;
+  }
+
+  .resume-toolbar {
+    display: none;
+  }
+
+  .resume-paper {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-paper {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-sidebar {
+    padding: 1.5rem;
+  }
+
+  .resume-main {
+    padding: 1.5rem;
+  }
+}

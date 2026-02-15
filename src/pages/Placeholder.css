@@ -1,0 +1,45 @@
+.placeholder-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  min-height: 60vh;
+  align-items: center;
+}
+
+.placeholder-content {
+  text-align: center;
+  max-width: 480px;
+}
+
+.placeholder-icon {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.placeholder-content h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.placeholder-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.coming-soon {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: var(--badge-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--badge-text);
+}
