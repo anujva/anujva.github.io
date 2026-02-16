@@ -15,17 +15,8 @@
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 60px;
-}
-
-.navbar-brand {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--accent);
-  text-decoration: none;
-  letter-spacing: -0.5px;
 }
 
 .navbar-right {

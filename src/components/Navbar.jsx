@@ -17,9 +17,6 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <NavLink to="/" className="navbar-brand">
-          AV
-        </NavLink>
         <div className="navbar-right">
           <ul className="navbar-links">
             {navItems.map(({ path, label, icon: Icon }) => (

@@ -7,6 +7,7 @@ import {
   Linkedin,
   Github,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 import "./About.css";
 
@@ -96,6 +97,114 @@ export default function About() {
             <p>
               Building tools and environments that let engineers focus on
               shipping -- from cloud dev environments to cross-tool automation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="highlights">
+        <h3>Mentoring & Leadership</h3>
+        <div className="highlight-grid highlight-grid-2">
+          <div className="highlight-card">
+            <div className="highlight-icon">M</div>
+            <h4>Engineering Mentorship</h4>
+            <p>
+              Mentored engineers through Thumbtack's formal mentoring program
+              across levels -- coached an L7 engineer on technical infrastructure
+              while still at L6, and later mentored an L6 engineer after
+              promotion to L7. Mentees have since leveled up to Senior Software
+              Engineering positions and moved into management.
+            </p>
+          </div>
+          <div className="highlight-card">
+            <div className="highlight-icon">TL</div>
+            <h4>Team Building</h4>
+            <p>
+              Led recruiting and restaffing as Tech Lead after a company
+              restructuring. Helped rebuild the team and onboard new engineers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="highlights">
+        <h3>Open Source & Side Projects</h3>
+        <div className="highlight-grid highlight-grid-2">
+          <div className="highlight-card">
+            <div className="highlight-icon">🐳</div>
+            <h4>
+              moby/moby{" "}
+              <a
+                href="https://github.com/moby/moby/pull/42320"
+                target="_blank"
+                rel="noreferrer"
+                className="oss-link"
+              >
+                <ExternalLink size={14} />
+              </a>
+            </h4>
+            <p>
+              Fixed a race condition in Docker's fluentd logging driver where
+              Close() could fire while the run() goroutine was still writing,
+              causing a panic. Added sync.WaitGroup coordination to guarantee
+              the goroutine exits before the underlying logger shuts down.
+            </p>
+          </div>
+          <div className="highlight-card">
+            <div className="highlight-icon">🔐</div>
+            <h4>
+              okta-aws-cli-assume-role{" "}
+              <a
+                href="https://github.com/oktadev/okta-aws-cli-assume-role/pull/387"
+                target="_blank"
+                rel="noreferrer"
+                className="oss-link"
+              >
+                <ExternalLink size={14} />
+              </a>
+            </h4>
+            <p>
+              Fixed SMS authentication in the Okta AWS CLI tool. The first SMS
+              verify response omits the session token, which broke the auth
+              flow. Added a check for the token before reading it.
+            </p>
+          </div>
+          <div className="highlight-card">
+            <div className="highlight-icon">📋</div>
+            <h4>
+              geek-life{" "}
+              <a
+                href="https://github.com/anujva/geek-life"
+                target="_blank"
+                rel="noreferrer"
+                className="oss-link"
+              >
+                <ExternalLink size={14} />
+              </a>
+            </h4>
+            <p>
+              Extended a TUI task manager with Jira and Linear integration --
+              two-way epic/task sync, search, vim-style keybindings (gg,
+              Shift+G), project description panes, and browser shortcuts to
+              open tickets directly. 35 commits over 18 months.
+            </p>
+          </div>
+          <div className="highlight-card">
+            <div className="highlight-icon">📝</div>
+            <h4>
+              previm{" "}
+              <a
+                href="https://github.com/anujva/previm"
+                target="_blank"
+                rel="noreferrer"
+                className="oss-link"
+              >
+                <ExternalLink size={14} />
+              </a>
+            </h4>
+            <p>
+              Added vimwiki support to previm, a vim plugin for previewing
+              markdown files in the browser.
             </p>
           </div>
         </div>

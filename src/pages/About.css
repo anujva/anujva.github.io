@@ -151,6 +151,10 @@
 }
 
 /* Highlights */
+.highlights + .highlights {
+  margin-top: 3rem;
+}
+
 .highlights h3 {
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
@@ -163,6 +167,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+.highlight-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .highlight-card {
@@ -203,6 +211,16 @@
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--text-muted);
+}
+
+.oss-link {
+  color: var(--text-muted);
+  vertical-align: middle;
+  transition: color 0.2s ease;
+}
+
+.oss-link:hover {
+  color: var(--accent-light);
 }
 
 @media (max-width: 768px) {

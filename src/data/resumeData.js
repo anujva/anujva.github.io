@@ -9,7 +9,7 @@ const resumeData = {
   github: "github.com/anujva",
 
   summary:
-    "Staff Engineer, 15+ years building distributed systems and platform infrastructure. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, real-time data pipelines, and more recently agentic AI tooling.",
+    "Staff Engineer, 15+ years building distributed systems and platform infrastructure. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
 
   skills: {
     "Programming Languages": [
