@@ -1,12 +1,21 @@
-import { useRef } from "react";
-import resumeData from "../data/resumeData";
+import { useRef, useState } from "react";
+import generalData from "../data/resumeData";
+import securityData from "../data/resumeDataSecurity";
 import { decode } from "../utils/obfuscate";
 import { Download } from "lucide-react";
 import "./Resume.css";
 
+const variants = [
+  { key: "general", label: "General", data: generalData, filename: "Anuj_Varma_Resume.pdf" },
+  { key: "security", label: "Security", data: securityData, filename: "Anuj_Varma_Security_Resume.pdf" },
+];
+
 export default function Resume() {
+  const [activeKey, setActiveKey] = useState("general");
   const resumeRef = useRef(null);
-  const d = resumeData;
+
+  const active = variants.find((v) => v.key === activeKey);
+  const d = active.data;
   const email = decode(d.email);
   const phone = decode(d.phone);
 
@@ -15,7 +24,7 @@ export default function Resume() {
     const element = resumeRef.current;
     const opt = {
       margin: 0,
-      filename: "Anuj_Varma_Resume.pdf",
+      filename: active.filename,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: {
         scale: 2,
@@ -36,10 +45,23 @@ export default function Resume() {
     <div className="resume-page">
       <div className="resume-toolbar">
         <h2>Resume</h2>
-        <button className="download-btn" onClick={handleDownload}>
-          <Download size={16} />
-          Download PDF
-        </button>
+        <div className="toolbar-actions">
+          <div className="variant-toggle">
+            {variants.map((v) => (
+              <button
+                key={v.key}
+                className={`variant-btn ${activeKey === v.key ? "active" : ""}`}
+                onClick={() => setActiveKey(v.key)}
+              >
+                {v.label}
+              </button>
+            ))}
+          </div>
+          <button className="download-btn" onClick={handleDownload}>
+            <Download size={16} />
+            Download PDF
+          </button>
+        </div>
       </div>
 
       <div className="resume-paper" ref={resumeRef}>
