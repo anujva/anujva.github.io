@@ -152,6 +152,26 @@ export default function About() {
             </p>
           </div>
           <div className="highlight-card">
+            <div className="highlight-icon">📡</div>
+            <h4>
+              fluent-logger-golang{" "}
+              <a
+                href="https://github.com/fluent/fluent-logger-golang/pull/93"
+                target="_blank"
+                rel="noreferrer"
+                className="oss-link"
+              >
+                <ExternalLink size={14} />
+              </a>
+            </h4>
+            <p>
+              Companion fix to the Docker logging bug -- added defensive
+              channel-close detection in the Fluentd Go logger using a
+              sync.RWMutex guard to prevent panics when Log() is called after
+              Close().
+            </p>
+          </div>
+          <div className="highlight-card">
             <div className="highlight-icon">🔐</div>
             <h4>
               okta-aws-cli-assume-role{" "}
@@ -190,24 +210,7 @@ export default function About() {
               open tickets directly. 35 commits over 18 months.
             </p>
           </div>
-          <div className="highlight-card">
-            <div className="highlight-icon">📝</div>
-            <h4>
-              previm{" "}
-              <a
-                href="https://github.com/anujva/previm"
-                target="_blank"
-                rel="noreferrer"
-                className="oss-link"
-              >
-                <ExternalLink size={14} />
-              </a>
-            </h4>
-            <p>
-              Added vimwiki support to previm, a vim plugin for previewing
-              markdown files in the browser.
-            </p>
-          </div>
+
         </div>
       </section>
     </div>
