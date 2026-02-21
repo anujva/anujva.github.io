@@ -322,20 +322,252 @@
   margin-bottom: 0.4rem;
 }
 
-/* Print/PDF-specific styles */
+/* ========== Print / Save-as-PDF styles ========== */
+/*
+ * Tip: In the browser print dialog, uncheck "Headers and footers"
+ * to remove the date / URL / page-number chrome the browser adds.
+ */
+@page {
+  size: letter;
+  margin: 0.4in 0 0.35in 0;  /* top/bottom breathing room; left/right 0 for edge-to-edge sidebar bg */
+}
+
 @media print {
+  /* Force light-theme colours so dark-mode doesn't invert the PDF */
+  :root,
+  [data-theme="dark"] {
+    --bg: #ffffff;
+    --text: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent: #1a3a5c;
+    --accent-light: #2563eb;
+    --border-light: #e2e8f0;
+    --card-border: #e2e8f0;
+    --sidebar-bg: #1a3a5c;
+    --sidebar-text: #e2e8f0;
+    --sidebar-heading: #93c5fd;
+    --sidebar-muted: #cbd5e1;
+    --sidebar-tag-bg: rgba(255, 255, 255, 0.1);
+    --sidebar-tag-border: rgba(255, 255, 255, 0.15);
+    --sidebar-divider: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Preserve background colours (sidebar, skill tags) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Hide everything that isn't the resume */
+  .navbar,
+  .resume-toolbar {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  /* Reset page wrapper */
   .resume-page {
     padding: 0;
+    max-width: none;
   }
 
-  .resume-toolbar {
-    display: none;
-  }
-
+  /* Single-column flow for clean pagination */
   .resume-paper {
+    display: block;
     border: none;
     border-radius: 0;
     box-shadow: none;
+    min-height: auto;
+    background: white;
+  }
+
+  /* ---- Sidebar → compact header banner ---- */
+  .resume-sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 0.35in 0.5in 0.3in;
+    /* No negative margins -- padding keeps content within safe area,
+       @page margin:0 lets the background reach the paper edge. */
+  }
+
+  .sidebar-header {
+    margin-bottom: 0.35rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .sidebar-name {
+    font-size: 1.35rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .sidebar-title {
+    font-size: 0.78rem;
+  }
+
+  /* Contact: single horizontal row */
+  .contact-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.1rem 1rem;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    gap: 0.25rem;
+    align-items: baseline;
+  }
+
+  .contact-label {
+    font-size: 0.58rem;
+  }
+
+  .contact-item span:last-child {
+    font-size: 0.7rem;
+  }
+
+  /* Sidebar sections: tight */
+  .sidebar-section {
+    margin-bottom: 0.35rem;
+  }
+
+  .sidebar-heading {
+    font-size: 0.62rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.15rem;
+  }
+
+  /* Skills: 2-column grid of categories so they don't stack vertically */
+  .sidebar-section:has(.skill-group) {
+    display: grid;
+    grid-template-columns: 1fr;  /* heading stays full-width */
+  }
+
+  .sidebar-section:has(.skill-group) .sidebar-heading {
+    grid-column: 1 / -1;
+  }
+
+  .sidebar-section:has(.skill-group) .skill-group {
+    display: inline;
+  }
+
+  .skill-group {
+    margin-bottom: 0.2rem;
+  }
+
+  .skill-category-title {
+    font-size: 0.6rem;
+    margin-bottom: 0.1rem;
+    display: inline;
+    margin-right: 0.25rem;
+  }
+
+  .skill-tags {
+    display: inline;
+  }
+
+  .skill-tag {
+    font-size: 0.56rem;
+    padding: 0.08rem 0.32rem;
+    display: inline;
+    margin: 0 0.12rem 0.15rem 0;
+  }
+
+  /* Languages: inline */
+  .language-item {
+    display: inline-flex;
+    gap: 0.2rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .language-name {
+    font-size: 0.7rem;
+  }
+
+  .language-level {
+    font-size: 0.6rem;
+  }
+
+  /* Education: compact, side-by-side */
+  .edu-item-sidebar {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+    vertical-align: top;
+  }
+
+  .edu-degree-sidebar {
+    font-size: 0.68rem;
+    margin-bottom: 0;
+  }
+
+  .edu-school-sidebar {
+    font-size: 0.62rem;
+  }
+
+  .edu-date-sidebar {
+    font-size: 0.58rem;
+  }
+
+  /* ---- Main content ---- */
+  .resume-main {
+    padding: 0.4in 0.5in 0.3in;
+  }
+
+  .main-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 0.78rem;
+    margin-bottom: 0.35rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .profile-text {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+
+  /* Job entries: allow page breaks within long entries,
+     but keep the header glued to the first bullet */
+  .job-entry {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .job-header {
+    page-break-after: avoid;
+    break-after: avoid;
+    margin-bottom: 0.2rem;
+  }
+
+  .job-title {
+    font-size: 0.78rem;
+  }
+
+  .job-company {
+    font-size: 0.7rem;
+  }
+
+  .job-date {
+    font-size: 0.65rem;
+  }
+
+  .job-bullets {
+    padding-left: 0.9rem;
+  }
+
+  .job-bullets li {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    margin-bottom: 0.15rem;
   }
 }
 

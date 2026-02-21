@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import generalData from "../data/resumeData";
 import securityData from "../data/resumeDataSecurity";
 import { decode } from "../utils/obfuscate";
@@ -6,40 +6,19 @@ import { Download } from "lucide-react";
 import "./Resume.css";
 
 const variants = [
-  { key: "general", label: "General", data: generalData, filename: "Anuj_Varma_Resume.pdf" },
-  { key: "security", label: "Security", data: securityData, filename: "Anuj_Varma_Security_Resume.pdf" },
+  { key: "general", label: "General", data: generalData },
+  { key: "security", label: "Security", data: securityData },
 ];
 
 export default function Resume() {
   const [activeKey, setActiveKey] = useState("general");
-  const resumeRef = useRef(null);
 
   const active = variants.find((v) => v.key === activeKey);
   const d = active.data;
   const email = decode(d.email);
   const phone = decode(d.phone);
 
-  const handleDownload = async () => {
-    const html2pdf = (await import("html2pdf.js")).default;
-    const element = resumeRef.current;
-    const opt = {
-      margin: 0,
-      filename: active.filename,
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        letterRendering: true,
-      },
-      jsPDF: {
-        unit: "in",
-        format: "letter",
-        orientation: "portrait",
-      },
-      pagebreak: { mode: ["avoid-all", "css", "legacy"] },
-    };
-    html2pdf().set(opt).from(element).save();
-  };
+  const handleDownload = () => window.print();
 
   return (
     <div className="resume-page">
@@ -59,12 +38,12 @@ export default function Resume() {
           </div>
           <button className="download-btn" onClick={handleDownload}>
             <Download size={16} />
-            Download PDF
+            Save as PDF
           </button>
         </div>
       </div>
 
-      <div className="resume-paper" ref={resumeRef}>
+      <div className="resume-paper">
         {/* Sidebar */}
         <aside className="resume-sidebar">
           <div className="sidebar-header">
