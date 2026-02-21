@@ -5,15 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:blog": "node scripts/build-blog-db.mjs",
+    "build": "npm run build:blog && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^0.564.0",
+    "marked": "^17.0.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "sql.js": "^1.14.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

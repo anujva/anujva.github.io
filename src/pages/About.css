@@ -1,73 +1,80 @@
 .about-page {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
+  padding: 4rem 1.5rem 5rem;
+  animation: fadeInUp 0.5s ease both;
 }
 
 /* Hero */
 .hero {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: start;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .hero-greeting {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin-bottom: 0.25rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .hero-name {
   font-family: "Inter", sans-serif;
-  font-size: 3.25rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: var(--text);
-  letter-spacing: -1.5px;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
 }
 
 .hero-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--accent-light);
-  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  letter-spacing: -0.25px;
 }
 
 .hero-summary {
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
 .hero-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.875rem;
 }
 
 .hero-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 0.75rem 1.625rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn.primary {
-  background: var(--btn-primary-bg);
-  color: white;
+  background: var(--text);
+  color: var(--bg);
+  box-shadow: 0 4px 16px var(--glow);
 }
 
 .hero-btn.primary:hover {
-  background: var(--btn-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--glow);
 }
 
 .hero-btn.secondary {
@@ -77,26 +84,42 @@
 }
 
 .hero-btn.secondary:hover {
-  background: var(--surface-hover);
+  border-color: var(--accent);
+  background: var(--nav-active-bg);
+  transform: translateY(-1px);
 }
 
 /* Hero aside */
 .hero-highlights {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.75rem;
   margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-highlights::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--text);
+  border-radius: 16px 16px 0 0;
 }
 
 .hero-highlights h4 {
   font-family: "Inter", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.125rem;
 }
 
 .highlights-list {
@@ -105,14 +128,14 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.675rem;
 }
 
 .highlights-list li {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--text-secondary);
-  padding-left: 1rem;
+  padding-left: 1.125rem;
   position: relative;
 }
 
@@ -124,35 +147,42 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--text-muted);
 }
 
 .hero-details {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.625rem;
 }
 
 .detail-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+  gap: 0.625rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
+.detail-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
 .detail-item a {
-  color: var(--accent-light);
+  color: var(--accent);
   text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
 }
 
 .detail-item a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
-/* Highlights */
+/* Section headings */
 .highlights + .highlights {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .highlights h3 {
@@ -160,13 +190,27 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.highlights h3::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
 }
 
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .highlight-grid-2 {
@@ -176,28 +220,31 @@
 .highlight-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.75rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--card-shadow);
+  position: relative;
 }
 
 .highlight-card:hover {
   border-color: var(--text-muted);
-  box-shadow: 0 4px 12px var(--card-shadow);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
 }
 
 .highlight-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--btn-primary-bg);
-  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--text);
+  color: var(--bg);
   font-weight: 700;
   font-size: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.125rem;
 }
 
 .highlight-card h4 {
@@ -205,11 +252,12 @@
   font-weight: 600;
   color: var(--text);
   margin-bottom: 0.5rem;
+  letter-spacing: -0.25px;
 }
 
 .highlight-card p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.65;
   color: var(--text-muted);
 }
 
@@ -220,20 +268,34 @@
 }
 
 .oss-link:hover {
-  color: var(--accent-light);
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
+  .about-page {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin-bottom: 3.5rem;
   }
 
   .hero-name {
     font-size: 2.5rem;
+    letter-spacing: -1.5px;
   }
 
   .highlight-grid {
     grid-template-columns: 1fr;
+  }
+
+  .highlight-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights + .highlights {
+    margin-top: 3rem;
   }
 }

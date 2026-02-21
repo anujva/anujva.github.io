@@ -1,14 +1,15 @@
 .resume-page {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 4rem;
+  animation: fadeInUp 0.5s ease both;
 }
 
 .resume-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .resume-toolbar h2 {
@@ -16,6 +17,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
+  letter-spacing: -0.5px;
 }
 
 /* Toolbar actions row */
@@ -29,54 +31,57 @@
 .variant-toggle {
   display: inline-flex;
   border: 1px solid var(--card-border);
-  border-radius: 8px;
+  border-radius: 9999px;
   overflow: hidden;
+  background: var(--surface);
+  padding: 3px;
 }
 
 .variant-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   background: transparent;
   color: var(--text-secondary);
   border: none;
   font-family: "Inter", sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.variant-btn:not(:last-child) {
-  border-right: 1px solid var(--card-border);
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .variant-btn.active {
-  background: var(--btn-primary-bg);
-  color: white;
+  background: var(--text);
+  color: var(--bg);
   font-weight: 600;
+  box-shadow: 0 2px 8px var(--glow);
 }
 
 .variant-btn:not(.active):hover {
-  background: var(--card-border);
+  background: var(--surface-hover);
+  color: var(--text);
 }
 
 .download-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  background: var(--btn-primary-bg);
-  color: white;
+  padding: 0.55rem 1.25rem;
+  background: var(--text);
+  color: var(--bg);
   border: none;
-  border-radius: 8px;
+  border-radius: 9999px;
   font-family: "Inter", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px var(--glow);
 }
 
 .download-btn:hover {
-  background: var(--btn-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--glow);
 }
 
 /* Paper container */
@@ -85,9 +90,9 @@
   grid-template-columns: 300px 1fr;
   background: var(--bg);
   border: 1px solid var(--card-border);
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 24px var(--card-shadow);
+  box-shadow: var(--card-shadow);
   min-height: 11in;
 }
 
@@ -109,7 +114,7 @@
   font-size: 1.75rem;
   font-weight: 800;
   color: white;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.75px;
   line-height: 1.2;
   margin-bottom: 0.35rem;
 }
@@ -126,7 +131,7 @@
 
 .sidebar-heading {
   font-family: "Inter", sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -186,8 +191,13 @@
   padding: 0.2rem 0.5rem;
   background: var(--sidebar-tag-bg);
   border: 1px solid var(--sidebar-tag-border);
-  border-radius: 4px;
+  border-radius: 6px;
   color: var(--sidebar-text);
+  transition: background 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* Languages */
@@ -244,13 +254,13 @@
 
 .section-title {
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--accent);
   margin-bottom: 1rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--accent);
   display: flex;
   align-items: center;
@@ -298,7 +308,7 @@
 
 .job-company {
   font-size: 0.85rem;
-  color: var(--accent-light);
+  color: var(--accent);
   font-weight: 500;
 }
 
@@ -329,7 +339,7 @@
  */
 @page {
   size: letter;
-  margin: 0.4in 0 0.35in 0;  /* top/bottom breathing room; left/right 0 for edge-to-edge sidebar bg */
+  margin: 0.4in 0 0.35in 0;
 }
 
 @media print {
@@ -374,6 +384,7 @@
   .resume-page {
     padding: 0;
     max-width: none;
+    animation: none;
   }
 
   /* Single-column flow for clean pagination */
@@ -386,13 +397,11 @@
     background: white;
   }
 
-  /* ---- Sidebar → compact header banner ---- */
+  /* ---- Sidebar -> compact header banner ---- */
   .resume-sidebar {
     background: var(--sidebar-bg);
     color: var(--sidebar-text);
     padding: 0.35in 0.5in 0.3in;
-    /* No negative margins -- padding keeps content within safe area,
-       @page margin:0 lets the background reach the paper edge. */
   }
 
   .sidebar-header {
@@ -442,10 +451,10 @@
     padding-bottom: 0.15rem;
   }
 
-  /* Skills: 2-column grid of categories so they don't stack vertically */
+  /* Skills: inline layout */
   .sidebar-section:has(.skill-group) {
     display: grid;
-    grid-template-columns: 1fr;  /* heading stays full-width */
+    grid-template-columns: 1fr;
   }
 
   .sidebar-section:has(.skill-group) .sidebar-heading {
@@ -476,6 +485,7 @@
     padding: 0.08rem 0.32rem;
     display: inline;
     margin: 0 0.12rem 0.15rem 0;
+    border-radius: 4px;
   }
 
   /* Languages: inline */
@@ -535,8 +545,7 @@
     line-height: 1.45;
   }
 
-  /* Job entries: allow page breaks within long entries,
-     but keep the header glued to the first bullet */
+  /* Job entries */
   .job-entry {
     margin-bottom: 0.5rem;
     padding-bottom: 0.4rem;
@@ -572,6 +581,16 @@
 }
 
 @media (max-width: 768px) {
+  .resume-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .resume-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .resume-paper {
     grid-template-columns: 1fr;
   }

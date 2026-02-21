@@ -1,0 +1,216 @@
+/* ── Blog post (single article) page ──────────────────────── */
+
+.blogpost-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* Back link */
+.blogpost-nav {
+  margin-bottom: 2rem;
+}
+
+.blogpost-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.blogpost-back:hover {
+  color: var(--text);
+  background: var(--nav-active-bg);
+}
+
+/* Article header */
+.blogpost-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.blogpost-header h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 750;
+  color: var(--text);
+  line-height: 1.25;
+  letter-spacing: -0.75px;
+  margin: 0 0 1rem;
+}
+
+.blogpost-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.blogpost-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.blogpost-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.blogpost-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  background: var(--badge-bg);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--badge-text);
+}
+
+/* ── Article content (rendered markdown) ─────────────────── */
+.blogpost-content {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.blogpost-content h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 2.5rem 0 0.75rem;
+  letter-spacing: -0.25px;
+}
+
+.blogpost-content h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 650;
+  color: var(--text);
+  margin: 2rem 0 0.5rem;
+}
+
+.blogpost-content p {
+  margin: 0 0 1.25rem;
+}
+
+.blogpost-content a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blogpost-content a:hover {
+  color: var(--text-muted);
+}
+
+.blogpost-content strong {
+  font-weight: 650;
+  color: var(--text);
+}
+
+.blogpost-content ul,
+.blogpost-content ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.blogpost-content li {
+  margin-bottom: 0.35rem;
+}
+
+.blogpost-content li::marker {
+  color: var(--text-muted);
+}
+
+.blogpost-content blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--text);
+  background: var(--card-bg);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.blogpost-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Code blocks */
+.blogpost-content code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85em;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+
+.blogpost-content pre {
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+
+.blogpost-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Loading / error / not found */
+.blogpost-loading,
+.blogpost-error,
+.blogpost-not-found {
+  text-align: center;
+  padding: 5rem 0;
+  color: var(--text-muted);
+}
+
+.blogpost-not-found h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blogpost-page {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .blogpost-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .blogpost-content {
+    font-size: 0.95rem;
+  }
+}
