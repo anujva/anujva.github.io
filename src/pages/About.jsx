@@ -39,6 +39,7 @@ export default function About() {
               <li>Led zero-downtime migration from EC2 PostgreSQL to Aurora</li>
               <li>Built real-time streaming infra with Kafka Connect and BigQuery</li>
               <li>Dropped a critical API from 500ms to 30ms p99</li>
+              <li>#2 all-time in peer recognition at Thumbtack (4,100+ tacos received via HeyTaco) and #1 among engineers</li>
               <li>15+ years across infrastructure, SRE, and developer experience</li>
             </ul>
           </div>
