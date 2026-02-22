@@ -1,5 +1,5 @@
 ---
-title: "From Subdomain to Sidecar: Building Cloud Development Environments on Envoy"
+title: From Subdomain to Sidecar: Building Cloud Development Environments on Envoy
 slug: cde-envoy-service-mesh
 excerpt: How Thumbtack uses a custom Envoy control plane on ECS to give every engineer their own network-isolated development environment without the cost of full per-engineer stacks.
 tags: envoy, service-mesh, platform-engineering, networking, ecs
@@ -54,9 +54,11 @@ Here's how it works at the network boundary:
 
 1. The request hits **Nginx**, which sits in front of the cluster
 2. Nginx extracts the subdomain prefix and injects it as an HTTP header:
+
    ```
    x-tt-routing-label: anujvarma
    ```
+
 3. The request is forwarded into the cluster with this header attached
 
 From this point on, Nginx is out of the picture. The routing label travels as a plain HTTP header, and it's Envoy's job to act on it at every service boundary.
@@ -115,9 +117,11 @@ Getting your service into the CDE system is intentionally low-friction. Engineer
 **Gerrit button** — We added a one-click deploy button directly into our code review tool. When you're reviewing your own change, you can deploy it to your CDE without leaving Gerrit. This is the most common path for feature development.
 
 **Alfred CLI** — `alfred` is Thumbtack's deployment CLI. You can deploy a labeled service directly from your terminal:
+
 ```
 alfred deploy --environment development --label anujvarma --version <image-tag> users
 ```
+
 The `--version` flag specifies the tagged container image with the engineer's changes baked in. `--environment` targets `development` or `staging`.
 
 **CDE Web App** — A web frontend for Alfred operations, useful for managing multiple labeled services or for engineers who prefer a UI over a CLI.

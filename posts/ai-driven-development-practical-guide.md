@@ -1,5 +1,5 @@
 ---
-title: "AI-driven development: a practical guide"
+title: AI-driven development: a practical guide
 slug: ai-driven-development-practical-guide
 excerpt: How I actually use LLMs in my day-to-day engineering work, what works well, and where it falls apart.
 tags: ai, developer-tools, productivity

@@ -1,5 +1,5 @@
 ---
-title: "Platform engineering: what I wish I knew earlier"
+title: Platform engineering: what I wish I knew earlier
 slug: platform-engineering-lessons
 excerpt: Hard-won lessons from building internal platforms, and why the best platform is the one nobody notices.
 tags: platform-engineering, devops, infrastructure
@@ -22,7 +22,7 @@ This means sane defaults that work for 80% of use cases, progressive disclosure 
 
 I've seen platforms that required 15 config files and a 30-step setup guide for a new service. Engineers would copy an existing service and modify it instead, leading to configuration drift and cargo-culted settings nobody understood.
 
-## Abstractions leak. Plan for it.
+## Abstractions leak. Plan for it
 
 Every abstraction your platform provides will eventually leak. The CI/CD pipeline will need a custom step. The deployment tool will need an escape hatch. The service template will need an override for that one team's special requirements.
 
