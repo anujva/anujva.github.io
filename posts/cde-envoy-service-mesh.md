@@ -1,5 +1,5 @@
 ---
-title: "From subdomain to sidecar: building cloud development environments on Envoy"
+title: From subdomain to sidecar - building cloud development environments on Envoy
 slug: cde-envoy-service-mesh
 excerpt: How Thumbtack uses a custom Envoy control plane on ECS to give every engineer their own network-isolated development environment without the cost of full per-engineer stacks.
 tags: envoy, service-mesh, platform-engineering, networking, ecs
