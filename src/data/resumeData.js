@@ -81,7 +81,7 @@ const resumeData = {
       bullets: [
         "Led zero-downtime migration of Thumbtack's most critical data store from self-hosted EC2 PostgreSQL to Aurora. Set up bidirectional replication through AWS DMS, coordinated the cutover, and upgraded client libraries across PHP, Golang, Python, and Scala services without dropping requests.",
         "Replaced the legacy sqoop-based pipeline that shipped PostgreSQL tables to BigQuery. Moved it to Aurora FastClones orchestrated through Airflow -- spin up a clone, read the data, ship it to BigQuery, tear the clone down. Production databases took zero load.",
-        "Refactored and upgraded the service mesh: built a new Envoy control plane with go-control-plane and ran sidecar Envoy containers alongside ECS and EC2 workloads.",
+        "Built a custom Envoy control plane (go-control-plane + sidecar ECS containers) enabling Cloud Development Environments: engineers deploy only their changed services and get full isolation via routing labels. Labels are extracted from personal subdomain URLs (engineer.demo.thumbtack.com), injected as HTTP headers at the edge, and propagated through the service graph — requests fall through to the shared baseline for untouched services. Zero duplicate infrastructure, zero application code changes.",
         "Set up multi-cloud infrastructure across AWS and GCP with Terraform and Puppet. Cut costs 35% and brought disaster recovery response time from hours to minutes.",
       ],
     },
