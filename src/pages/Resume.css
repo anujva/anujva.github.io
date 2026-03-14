@@ -278,6 +278,14 @@
   color: var(--text-secondary);
 }
 
+.profile-text p {
+  margin-bottom: 0.65rem;
+}
+
+.profile-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Job entries */
 .job-entry {
   margin-bottom: 1.5rem;
@@ -577,6 +585,120 @@
     font-size: 0.7rem;
     line-height: 1.4;
     margin-bottom: 0.15rem;
+  }
+}
+
+/* ========== Platform Lead: 3-page print overrides ========== */
+/*
+ * The Platform Lead variant has more content (7 roles, 31 bullets).
+ * These overrides relax the compressed print layout so it fills
+ * 3 pages evenly instead of awkwardly overflowing onto a sparse page 3.
+ */
+@media print {
+  .resume-paper[data-variant="platform-lead"] .resume-sidebar {
+    padding: 0.3in 0.5in 0.25in;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .sidebar-name {
+    font-size: 1.4rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .sidebar-title {
+    font-size: 0.82rem;
+  }
+
+  /* Slightly more generous skill tags */
+  .resume-paper[data-variant="platform-lead"] .skill-tag {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.38rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .skill-category-title {
+    font-size: 0.64rem;
+  }
+
+  /* Eliminate trailing space that can push a blank 4th page */
+  .resume-paper[data-variant="platform-lead"] .resume-main {
+    padding: 0.4in 0.5in 0;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .profile-text {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .main-section {
+    margin-bottom: 0.65rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .section-title {
+    font-size: 0.82rem;
+    margin-bottom: 0.45rem;
+    padding-bottom: 0.25rem;
+  }
+
+  /* Job entries: allow splitting across pages so content flows without gaps */
+  .resume-paper[data-variant="platform-lead"] .job-entry {
+    break-inside: auto;
+    page-break-inside: auto;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: auto;
+    page-break-after: auto;
+    margin-bottom: 0.3rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-title {
+    font-size: 0.82rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-company {
+    font-size: 0.74rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-date {
+    font-size: 0.68rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-bullets li {
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin-bottom: 0.2rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .job-bullets {
+    padding-left: 1rem;
+  }
+
+  /* Force Work History to start on page 2 */
+  .resume-paper[data-variant="platform-lead"] .work-history-section {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Hide entries flagged with hideInPrint */
+  .hide-in-print {
+    display: none !important;
+  }
+
+  /* Profile paragraphs spacing */
+  .resume-paper[data-variant="platform-lead"] .profile-text p {
+    margin-bottom: 0.35rem;
+  }
+
+  .resume-paper[data-variant="platform-lead"] .profile-text p:last-child {
+    margin-bottom: 0;
   }
 }
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import generalData from "../data/resumeData";
 import securityData from "../data/resumeDataSecurity";
+import platformLeadData from "../data/resumeDataPlatformLead";
 import { decode } from "../utils/obfuscate";
 import { Download } from "lucide-react";
 import "./Resume.css";
@@ -8,6 +9,7 @@ import "./Resume.css";
 const variants = [
   { key: "general", label: "General", data: generalData },
   { key: "security", label: "Security", data: securityData },
+  { key: "platform-lead", label: "Platform Lead", data: platformLeadData },
 ];
 
 export default function Resume() {
@@ -43,7 +45,7 @@ export default function Resume() {
         </div>
       </div>
 
-      <div className="resume-paper">
+      <div className="resume-paper" data-variant={activeKey}>
         {/* Sidebar */}
         <aside className="resume-sidebar">
           <div className="sidebar-header">
@@ -118,16 +120,20 @@ export default function Resume() {
               <span className="section-icon">&#9654;</span>
               Profile
             </h2>
-            <p className="profile-text">{d.summary}</p>
+            <div className="profile-text">
+              {d.summary.split("\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
           </div>
 
-          <div className="main-section">
+          <div className="main-section work-history-section">
             <h2 className="section-title">
               <span className="section-icon">&#9654;</span>
               Work History
             </h2>
             {d.experience.map((job, i) => (
-              <div key={i} className="job-entry">
+              <div key={i} className={`job-entry${job.hideInPrint ? " hide-in-print" : ""}`}>
                 <div className="job-header">
                   <div>
                     <h3 className="job-title">{job.title}</h3>
