@@ -12,11 +12,13 @@ How we turned a failed consultancy engagement into a successful cloud migration.
 
 ## The Situation
 
-In the span of a few weeks, our Platform/SRE team lost four senior and staff-level engineers. I was brought in as the new team lead to rebuild. We had two senior engineers, three juniors, and a complex, self-managed Postgres setup with institutional knowledge that had walked out the door.
+In the span of a few weeks, four senior and staff-level engineers left the Platform/SRE team. Almost like they coordinated it. At the time, this was shocking—these engineers represented the best of what Thumbtack Engineering had to offer. We scrambled to rebuild: two senior openings, three junior positions.
 
-Leadership, skeptical of the team's capacity to execute, had already engaged an external consultancy without consulting me. Eight weeks later, they delivered only a proof-of-concept and left.
+This team had inherited a complex, self-managed Postgres setup. The institutional knowledge walked out the door with those four engineers.
 
-That's when I proposed restarting the project. I took ownership as DRI. We finished in four months.
+Leadership, skeptical of our capacity to execute, had already engaged an external consultancy without consulting me (the most senior engineer at the time, though not officially the Team Lead) or the team. Six to eight weeks later, they delivered only a proof-of-concept and left.
+
+That's when I proposed restarting the project. I took ownership as DRI. We finished in four months—and delivered incremental value throughout by upgrading the CI environments as we went.
 
 ---
 
