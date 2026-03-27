@@ -137,4 +137,4 @@ And sometimes the best solution isn't the newest one. pgBouncer in a container t
 
 ---
 
-Have you navigated a similar migration challenge? I'd love to hear about your approach. Reach out at contact placeholder.
+Have you navigated a similar migration challenge? I'd love to hear about your approach. You can reach me through my socials.
