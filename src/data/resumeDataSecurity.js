@@ -69,7 +69,7 @@ const resumeDataSecurity = {
       title: "Staff Engineer, Developer Experience",
       company: "Thumbtack",
       location: "Remote",
-      date: "2024 - Present",
+      date: "2024 - March 2026",
       bullets: [
         "Rolled out 6 agentic coding tools across engineering with security guardrails: scoped permissions, secret-filtering shim layers, and sandboxed execution environments.",
         "Built an isolated cloud dev environment where engineers spin up resources like PostgreSQL with one click. Enforced per-environment IAM boundaries so dev resources cannot reach production data.",

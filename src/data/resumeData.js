@@ -64,7 +64,7 @@ const resumeData = {
       title: "Staff Engineer, Developer Experience",
       company: "Thumbtack",
       location: "Remote",
-      date: "2024 - Present",
+      date: "2024 - March 2026",
       bullets: [
         "Rolled out 6 agentic coding tools (GitHub Copilot Agents, Roo Code, Claude Code, OpenCode, Augment, Codex) across Thumbtack engineering. Hit 96%+ developer adoption in the first rollout.",
         "Built a cross-tool shim layer that translates engineering best practices (skills and scripts) once and applies them across all agentic tools, so we don't have to configure each tool separately.",

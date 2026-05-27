@@ -60,7 +60,7 @@ const resumeDataPlatformLead = {
       title: "Staff Engineer & Team Lead, Developer Experience",
       company: "Thumbtack",
       location: "Remote",
-      date: "2024 - Present",
+      date: "2024 - March 2026",
       bullets: [
         "Delivered an AI-powered platform across Slack and web UI for cross-codebase Q&A, automated code reviews, and change request creation — full-stack ownership from LLM orchestration and RAG indexing to React frontend and Slack integration.",
         "Rolled out 6 agentic coding tools (GitHub Copilot Agents, Claude Code, OpenCode, and others) across 100+ engineers. Designed the evaluation framework, led vendor selection, and hit 96% developer adoption in the first rollout cycle.",
