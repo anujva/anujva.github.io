@@ -134,16 +134,7 @@ const resumeDataPlatformLead = {
         "Built a framework for programmatic Spark job submissions in fully kerberized YARN clusters, enabling distributed security analytics at scale.",
       ],
     },
-    {
-      title: "Software Engineer",
-      company: "Infosys",
-      location: "India",
-      date: "2008 - 2012",
-      bullets: [
-        "Built full-stack applications for the digital transformation of Telstra, Australia's largest telecommunications company — Java EJB backends deployed on JBoss/GlassFish servers with Java Applet frontends.",
-        "Delivered systems from the ground up as part of a large-scale enterprise transformation program, working across backend services, frontend interfaces, and deployment infrastructure.",
-      ],
-    },
+
   ],
 
   education: [
