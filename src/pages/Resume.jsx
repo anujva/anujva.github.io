@@ -127,6 +127,25 @@ export default function Resume() {
             </div>
           </div>
 
+          <div className="main-section education-section">
+            <h2 className="section-title">
+              <span className="section-icon">&#9654;</span>
+              Education
+            </h2>
+            {d.education.map((edu, i) => (
+              <div key={i} className="edu-entry">
+                <div className="edu-header">
+                  <div>
+                    <h3 className="edu-degree">{edu.degree}</h3>
+                    <p className="edu-school">{edu.school}</p>
+                  </div>
+                  <span className="edu-date">{edu.date}</span>
+                </div>
+                {edu.details && <p className="edu-details">{edu.details}</p>}
+              </div>
+            ))}
+          </div>
+
           <div className="main-section work-history-section">
             <h2 className="section-title">
               <span className="section-icon">&#9654;</span>

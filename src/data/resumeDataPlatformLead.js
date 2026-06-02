@@ -9,7 +9,7 @@ const resumeDataPlatformLead = {
   github: "github.com/anujva",
 
   summary:
-    "Engineering leader with 15+ years delivering full-stack platforms end-to-end — from frontend applications to backend services to production infrastructure. Career spans enterprise digital transformation (Telstra at Infosys), security analytics platforms (Securonix SIEM), financial services (American Express CLP), industrial IoT (GE Predix), and marketplace infrastructure (Thumbtack).\n\nRebuilt Thumbtack's SRE team from 1 remaining engineer to 8+, owning the hiring pipeline, interview loop design, team charter, and multi-cloud platform roadmap — reporting to the Director of Engineering and collaborating closely with the SVP of Engineering. Hands-on across the stack: React and Grails frontends, Golang and Java backends, Kafka streaming pipelines, and AWS/GCP infrastructure-as-code.\n\nLed compliance initiatives across PCI-DSS, SOC2, and CCPA: implemented audit logging systems, configured AWS CloudTrail across 5 accounts, coordinated cross-team data deletion pipelines spanning AWS and BigQuery on GCP, and provided technical evidence during auditor engagements — awarded PCI Champion 2023. Built and shipped an application-layer firewall overnight to stop a credential-stuffing attack that AWS WAF and Shield could not block. Most recently delivering AI-powered developer platforms with full-stack ownership from LLM orchestration to React frontend to Slack integration.",
+    "Engineering leader with 15+ years delivering full-stack platforms end-to-end — from frontend applications to backend services to production infrastructure. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Career spans enterprise digital transformation (Telstra at Infosys), security analytics platforms (Securonix SIEM), financial services (American Express CLP), industrial IoT (GE Predix), and marketplace infrastructure (Thumbtack).\n\nRebuilt Thumbtack's SRE team from 1 remaining engineer to 8+, owning the hiring pipeline, interview loop design, team charter, and multi-cloud platform roadmap — reporting to the Director of Engineering and collaborating closely with the SVP of Engineering. Hands-on across the stack: React and Grails frontends, Golang and Java backends, Kafka streaming pipelines, and AWS/GCP infrastructure-as-code.\n\nLed compliance initiatives across PCI-DSS, SOC2, and CCPA: implemented audit logging systems, configured AWS CloudTrail across 5 accounts, coordinated cross-team data deletion pipelines spanning AWS and BigQuery on GCP, and provided technical evidence during auditor engagements — awarded PCI Champion 2023. Built and shipped an application-layer firewall overnight to stop a credential-stuffing attack that AWS WAF and Shield could not block. Most recently delivering AI-powered developer platforms with full-stack ownership from LLM orchestration to React frontend to Slack integration.",
 
   skills: {
     "Leadership & Delivery": [
@@ -134,14 +134,39 @@ const resumeDataPlatformLead = {
         "Built a framework for programmatic Spark job submissions in fully kerberized YARN clusters, enabling distributed security analytics at scale.",
       ],
     },
-
+    {
+      title: "Director",
+      company: "Sketch Lounge Web Services Pvt. Ltd.",
+      location: "India",
+      date: "Apr 2010 - Aug 2011",
+      hideInPrint: true,
+      bullets: [
+        "Co-founded and led a web services startup developing a crowdsourced recommendation engine for local deals on big-ticket purchases.",
+        "Built the platform using Python (Django), PHP (Drupal), and Android — handling full-stack development, database design, and API integrations.",
+        "Managed a small team, overseeing code reviews, sprint planning, and product delivery.",
+        "Handled client relationships, vendor negotiations, and go-to-market strategy.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "Infosys Technologies Pvt. Ltd.",
+      location: "Pune, India",
+      date: "Sep 2008 - Apr 2010",
+      hideInPrint: true,
+      bullets: [
+        "Trained in Java and .NET at Infosys Mysore campus, then posted to the Pune delivery center.",
+        "Developed Java/J2EE applications for the Telstra Digital Transformation project — an Australian enterprise client modernizing their customer-facing web platforms.",
+        "Deployed applications on JBoss Web Server and Tomcat application servers, working with onshore and offshore teams following structured delivery methodology.",
+      ],
+    },
   ],
 
   education: [
     {
-      degree: "M.Sc. in Electrical Engineering - Audio/Video Processing",
+      degree: "M.Sc. in Electrical Engineering",
       school: "University of Southern California",
       date: "2012 - 2013",
+      details: "Specialization: Audio/Video Processing | Research Assistant, Tower Labs",
     },
     {
       degree: "B.Eng. in Electronics & Communication Engineering",

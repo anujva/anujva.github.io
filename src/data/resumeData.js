@@ -9,7 +9,7 @@ const resumeData = {
   github: "github.com/anujva",
 
   summary:
-    "Staff Engineer, 15+ years building distributed systems and platform infrastructure. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
+    "Staff Engineer, 15+ years building distributed systems and platform infrastructure. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
 
   skills: {
     "Programming Languages": [
@@ -137,13 +137,39 @@ const resumeData = {
         "Created a framework in Java for programmatic Spark job submissions in YARN cluster mode in fully kerberized environments.",
       ],
     },
+    {
+      title: "Director",
+      company: "Sketch Lounge Web Services Pvt. Ltd.",
+      location: "India",
+      date: "Apr 2010 - Aug 2011",
+      bullets: [
+        "Led end-to-end development of a crowdsourced recommendation engine for local deals — helping consumers discover the best prices and recommendations from real users for big-ticket purchases like TVs and electronics.",
+        "Architected and built the web platform using Python (Django) and PHP (Drupal), handling backend development, database design, and API integrations.",
+        "Developed Android mobile applications to extend the platform to mobile users.",
+        "Managed a small team of developers, overseeing code reviews, sprint planning, and product delivery.",
+        "Handled client relationships, vendor negotiations, and go-to-market strategy.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "Infosys Technologies Pvt. Ltd.",
+      location: "Pune, India",
+      date: "Sep 2008 - Apr 2010",
+      bullets: [
+        "Trained in Java and .NET at Infosys Mysore campus, then posted to the Pune delivery center.",
+        "Developed Java/J2EE applications for the Telstra Digital Transformation project — an Australian enterprise client modernizing their customer-facing web platforms.",
+        "Deployed applications on JBoss Web Server and Tomcat application servers in a production environment.",
+        "Collaborated with offshore and onshore teams following Infosys's structured delivery methodology.",
+      ],
+    },
   ],
 
   education: [
     {
-      degree: "M.Sc. in Electrical Engineering - Audio/Video Processing",
+      degree: "M.Sc. in Electrical Engineering",
       school: "University of Southern California",
       date: "2012 - 2013",
+      details: "Specialization: Audio/Video Processing | Research Assistant, Tower Labs",
     },
     {
       degree: "B.Eng. in Electronics & Communication Engineering",

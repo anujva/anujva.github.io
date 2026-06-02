@@ -9,7 +9,7 @@ const resumeDataSecurity = {
   github: "github.com/anujva",
 
   summary:
-    "Staff Engineer with 15+ years of experience building secure distributed systems and cloud infrastructure. Promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure with a focus on security posture: mTLS service mesh, WAF/Shield-protected API layers, least-privilege IAM, VPC network segmentation, and PrivateLink connectivity. Background includes SIEM security analytics at Securonix, infrastructure hardening with Terraform, and securing container orchestration across ECS, EKS, and Kubernetes.",
+    "Staff Engineer with 15+ years of experience building secure distributed systems and cloud infrastructure. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure with a focus on security posture: mTLS service mesh, WAF/Shield-protected API layers, least-privilege IAM, VPC network segmentation, and PrivateLink connectivity. Background includes SIEM security analytics at Securonix, infrastructure hardening with Terraform, and securing container orchestration across ECS, EKS, and Kubernetes.",
 
   skills: {
     "Security & Networking": [
@@ -138,13 +138,41 @@ const resumeDataSecurity = {
         "Implemented WebSocket capability for low-latency updates on security dashboards, enabling real-time threat visibility.",
       ],
     },
+    {
+      title: "Director",
+      company: "Sketch Lounge Web Services Pvt. Ltd.",
+      location: "India",
+      date: "Apr 2010 - Aug 2011",
+      hideInPrint: true,
+      bullets: [
+        "Led end-to-end development of a crowdsourced recommendation engine for local deals — helping consumers discover the best prices and recommendations from real users for big-ticket purchases.",
+        "Architected and built the web platform using Python (Django) and PHP (Drupal), handling backend development, database design, and API integrations with security best practices.",
+        "Developed Android mobile applications to extend the platform to mobile users.",
+        "Managed a small team of developers, overseeing code reviews, sprint planning, and product delivery.",
+        "Handled client relationships, vendor negotiations, and go-to-market strategy.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "Infosys Technologies Pvt. Ltd.",
+      location: "Pune, India",
+      date: "Sep 2008 - Apr 2010",
+      hideInPrint: true,
+      bullets: [
+        "Trained in Java and .NET at Infosys Mysore campus, then posted to the Pune delivery center.",
+        "Developed Java/J2EE applications for the Telstra Digital Transformation project — an Australian enterprise client modernizing their customer-facing web platforms.",
+        "Deployed applications on JBoss Web Server and Tomcat application servers in a production environment, implementing access controls and secure deployment practices.",
+        "Collaborated with offshore and onshore teams following Infosys's structured delivery methodology.",
+      ],
+    },
   ],
 
   education: [
     {
-      degree: "M.Sc. in Electrical Engineering - Audio/Video Processing",
+      degree: "M.Sc. in Electrical Engineering",
       school: "University of Southern California",
       date: "2012 - 2013",
+      details: "Specialization: Audio/Video Processing | Research Assistant, Tower Labs",
     },
     {
       degree: "B.Eng. in Electronics & Communication Engineering",

@@ -286,6 +286,56 @@
   margin-bottom: 0;
 }
 
+/* Education section in main content */
+.education-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.edu-entry {
+  margin-bottom: 1rem;
+}
+
+.edu-entry:last-child {
+  margin-bottom: 0;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+  gap: 1rem;
+}
+
+.edu-degree {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.edu-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.edu-details {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
 /* Job entries */
 .job-entry {
   margin-bottom: 1.5rem;
@@ -687,6 +737,33 @@
     page-break-before: always;
   }
 
+  /* Education section in main content */
+  .edu-entry {
+    margin-bottom: 0.75rem;
+  }
+
+  .edu-header {
+    margin-bottom: 0.15rem;
+  }
+
+  .edu-degree {
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .edu-school {
+    font-size: 0.8rem;
+  }
+
+  .edu-date {
+    font-size: 0.72rem;
+  }
+
+  .edu-details {
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+  }
+
   /* Hide entries flagged with hideInPrint */
   .hide-in-print {
     display: none !important;
@@ -723,5 +800,19 @@
 
   .resume-main {
     padding: 1.5rem;
+  }
+
+  .education-section {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .edu-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .edu-date {
+    font-size: 0.75rem;
   }
 }
