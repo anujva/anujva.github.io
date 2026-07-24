@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import generalData from "../data/resumeData";
 import securityData from "../data/resumeDataSecurity";
 import platformLeadData from "../data/resumeDataPlatformLead";
@@ -13,12 +14,25 @@ const variants = [
 ];
 
 export default function Resume() {
-  const [activeKey, setActiveKey] = useState("general");
+  const [searchParams] = useSearchParams();
+  const requested = searchParams.get("variant");
+  const [activeKey, setActiveKey] = useState(
+    variants.some((v) => v.key === requested) ? requested : "general",
+  );
 
   const active = variants.find((v) => v.key === activeKey);
   const d = active.data;
   const email = decode(d.email);
   const phone = decode(d.phone);
+
+  // The browser uses document.title as the default filename for Save as PDF.
+  useEffect(() => {
+    const previous = document.title;
+    document.title = `Anuj Varma - ${active.label} Resume`;
+    return () => {
+      document.title = previous;
+    };
+  }, [active.label]);
 
   const handleDownload = () => window.print();
 

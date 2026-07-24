@@ -596,6 +596,8 @@
     font-size: 0.78rem;
     margin-bottom: 0.35rem;
     padding-bottom: 0.2rem;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .profile-text {
@@ -638,11 +640,11 @@
   }
 }
 
-/* ========== Platform Lead: 3-page print overrides ========== */
+/* ========== Platform Lead: print overrides ========== */
 /*
- * The Platform Lead variant has more content (7 roles, 31 bullets).
- * These overrides relax the compressed print layout so it fills
- * 3 pages evenly instead of awkwardly overflowing onto a sparse page 3.
+ * The Platform Lead variant has more content than the others.
+ * These overrides relax the compressed print layout and let content
+ * flow continuously so pages fill evenly without forced breaks.
  */
 @media print {
   .resume-paper[data-variant="platform-lead"] .resume-sidebar {
@@ -731,15 +733,11 @@
     padding-left: 1rem;
   }
 
-  /* Force Work History to start on page 2 */
-  .resume-paper[data-variant="platform-lead"] .work-history-section {
-    break-before: page;
-    page-break-before: always;
-  }
-
   /* Education section in main content */
   .edu-entry {
     margin-bottom: 0.75rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .edu-header {

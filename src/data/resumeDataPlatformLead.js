@@ -1,7 +1,7 @@
 const resumeDataPlatformLead = {
   name: "Anuj Varma",
   title: "Engineering Leader — Full-Stack Platform Delivery",
-  location: "Seattle, WA",
+  location: "Mumbai Metropolitan Area",
   // obfuscated: base64(reverse(plaintext)) — see src/utils/obfuscate.js
   phone: "MTE3Ny0wNDYtNTI5",
   email: "bW9jLmxpYW1nQGF2anVuYQ==",
@@ -56,6 +56,15 @@ const resumeDataPlatformLead = {
   },
 
   experience: [
+    {
+      title: "Executive Director",
+      company: "Wissen Technology",
+      location: "Mumbai Metropolitan Area",
+      date: "2026 - Present",
+      bullets: [
+        "Leading platform engineering for Wissen's product platform: multi-account AWS landing zone vended through OpenTofu, immutable infrastructure with Packer-built golden AMIs, and HashiCorp Nomad for workload orchestration.",
+      ],
+    },
     {
       title: "Staff Engineer & Team Lead, Developer Experience",
       company: "Thumbtack",
