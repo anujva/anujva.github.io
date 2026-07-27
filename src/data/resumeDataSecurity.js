@@ -1,6 +1,6 @@
 const resumeDataSecurity = {
   name: "Anuj Varma",
-  title: "Staff Software Engineer - Security & Infrastructure",
+  title: "Engineering Leader — Security & Infrastructure",
   location: "Mumbai Metropolitan Area",
   // obfuscated: base64(reverse(plaintext)) — see src/utils/obfuscate.js
   phone: "MTE3Ny0wNDYtNTI5",
@@ -9,7 +9,7 @@ const resumeDataSecurity = {
   github: "github.com/anujva",
 
   summary:
-    "Staff Engineer with 15+ years of experience building secure distributed systems and cloud infrastructure. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure with a focus on security posture: mTLS service mesh, WAF/Shield-protected API layers, least-privilege IAM, VPC network segmentation, and PrivateLink connectivity. Background includes SIEM security analytics at Securonix, infrastructure hardening with Terraform, and securing container orchestration across ECS, EKS, and Kubernetes.",
+    "Engineering leader with 15+ years of experience building secure distributed systems and cloud infrastructure, currently Executive Director at Wissen Technology leading platform engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure with a focus on security posture: mTLS service mesh, WAF/Shield-protected API layers, least-privilege IAM, VPC network segmentation, and PrivateLink connectivity. Background includes SIEM security analytics at Securonix, infrastructure hardening with Terraform, and securing container orchestration across ECS, EKS, and Kubernetes.",
 
   skills: {
     "Security & Networking": [

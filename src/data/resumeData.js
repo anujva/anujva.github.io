@@ -1,6 +1,6 @@
 const resumeData = {
   name: "Anuj Varma",
-  title: "Staff Software Engineer",
+  title: "Engineering Leader — Distributed Systems & Platform Infrastructure",
   location: "Mumbai Metropolitan Area",
   // obfuscated: base64(reverse(plaintext)) — see src/utils/obfuscate.js
   phone: "MTE3Ny0wNDYtNTI5",
@@ -9,7 +9,7 @@ const resumeData = {
   github: "github.com/anujva",
 
   summary:
-    "Staff Engineer, 15+ years building distributed systems and platform infrastructure. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
+    "Engineering leader with 15+ years building distributed systems and platform infrastructure, currently Executive Director at Wissen Technology leading platform engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
 
   skills: {
     "Programming Languages": [
