@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build:blog": "node scripts/build-blog-db.mjs",
-    "build": "npm run build:blog && vite build",
+    "dev": "bun run build:blog && vite",
+    "build:blog": "bun scripts/build-blog-db.mjs",
+    "build": "bun run build:blog && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

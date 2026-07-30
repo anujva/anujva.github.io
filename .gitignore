@@ -3,6 +3,12 @@ node_modules/
 
 # Build output
 dist/
+public/blog.db
+
+# Lockfiles from other package managers (this project uses bun)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Editor
 .vscode/
