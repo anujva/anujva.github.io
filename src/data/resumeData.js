@@ -1,8 +1,8 @@
 const resumeData = {
   name: "Anuj Varma",
-  title: "Engineering Leader — Distributed Systems & Platform Infrastructure",
+  title: "Engineering Leader, Distributed Systems & Platform Infrastructure",
   location: "Mumbai Metropolitan Area",
-  // obfuscated: base64(reverse(plaintext)) — see src/utils/obfuscate.js
+  // obfuscated: base64(reverse(plaintext)). See src/utils/obfuscate.js
   phone: "MTE3Ny0wNDYtNTI5",
   email: "bW9jLmxpYW1nQGF2anVuYQ==",
   linkedin: "linkedin.com/in/anuj-varma-6b625520",
@@ -90,7 +90,7 @@ const resumeData = {
       bullets: [
         "Led zero-downtime migration of Thumbtack's most critical data store from self-hosted EC2 PostgreSQL to Aurora. Set up bidirectional replication through AWS DMS, coordinated the cutover, and upgraded client libraries across PHP, Golang, Python, and Scala services without dropping requests.",
         "Replaced the legacy sqoop-based pipeline that shipped PostgreSQL tables to BigQuery. Moved it to Aurora FastClones orchestrated through Airflow -- spin up a clone, read the data, ship it to BigQuery, tear the clone down. Production databases took zero load.",
-        "Built a custom Envoy control plane (go-control-plane + sidecar ECS containers) enabling Cloud Development Environments: engineers deploy only their changed services and get full isolation via routing labels. Labels are extracted from personal subdomain URLs (engineer.demo.thumbtack.com), injected as HTTP headers at the edge, and propagated through the service graph — requests fall through to the shared baseline for untouched services. Zero duplicate infrastructure, zero application code changes.",
+        "Built a custom Envoy control plane (go-control-plane + sidecar ECS containers) enabling Cloud Development Environments: engineers deploy only their changed services and get full isolation via routing labels. Labels are extracted from personal subdomain URLs (engineer.demo.thumbtack.com), injected as HTTP headers at the edge, and propagated through the service graph. Requests fall through to the shared baseline for untouched services. Zero duplicate infrastructure, zero application code changes.",
         "Set up multi-cloud infrastructure across AWS and GCP with Terraform and Puppet. Cut costs 35% and brought disaster recovery response time from hours to minutes.",
       ],
     },
@@ -152,7 +152,7 @@ const resumeData = {
       location: "India",
       date: "Apr 2010 - Aug 2011",
       bullets: [
-        "Led end-to-end development of a crowdsourced recommendation engine for local deals — helping consumers discover the best prices and recommendations from real users for big-ticket purchases like TVs and electronics.",
+        "Led end-to-end development of a crowdsourced recommendation engine for local deals, helping consumers discover the best prices and recommendations from real users for big-ticket purchases like TVs and electronics.",
         "Architected and built the web platform using Python (Django) and PHP (Drupal), handling backend development, database design, and API integrations.",
         "Developed Android mobile applications to extend the platform to mobile users.",
         "Managed a small team of developers, overseeing code reviews, sprint planning, and product delivery.",
@@ -166,7 +166,7 @@ const resumeData = {
       date: "Sep 2008 - Apr 2010",
       bullets: [
         "Trained in Java and .NET at Infosys Mysore campus, then posted to the Pune delivery center.",
-        "Developed Java/J2EE applications for the Telstra Digital Transformation project — an Australian enterprise client modernizing their customer-facing web platforms.",
+        "Developed Java/J2EE applications for the Telstra Digital Transformation project, an Australian enterprise client modernizing their customer-facing web platforms.",
         "Deployed applications on JBoss Web Server and Tomcat application servers in a production environment.",
         "Collaborated with offshore and onshore teams following Infosys's structured delivery methodology.",
       ],
