@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router";
 import { useEffect } from "react";
 import { ThemeProvider } from "./components/ThemeContext";
 import Navbar from "./components/Navbar";

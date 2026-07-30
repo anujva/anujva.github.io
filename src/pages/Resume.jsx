@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router";
 import generalData from "../data/resumeData";
 import securityData from "../data/resumeDataSecurity";
 import platformLeadData from "../data/resumeDataPlatformLead";

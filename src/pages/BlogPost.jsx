@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import { marked } from "marked";
 import { getPostBySlug } from "../lib/blogDb";

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { User, FileText, BookOpen, FolderOpen, Mail, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeContext";
 import "./Navbar.css";
