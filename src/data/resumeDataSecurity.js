@@ -9,7 +9,7 @@ const resumeDataSecurity = {
   github: "github.com/anujva",
 
   summary:
-    "Engineering leader with 15+ years of experience building secure distributed systems and cloud infrastructure, currently Executive Director at Wissen Technology leading platform engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure with a focus on security posture: mTLS service mesh, WAF/Shield-protected API layers, least-privilege IAM, VPC network segmentation, and PrivateLink connectivity. Background includes SIEM security analytics at Securonix, infrastructure hardening with Terraform, and securing container orchestration across ECS, EKS, and Kubernetes.",
+    "Engineering leader with 15+ years building secure distributed systems and cloud infrastructure, currently Executive Director at Wissen Technology leading platform engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, which is where most of the security work sat: mTLS across the service mesh, WAF and Shield in front of the API layer, least-privilege IAM, VPC segmentation, and PrivateLink for partner connectivity. Earlier in my career I worked on SIEM security analytics at Securonix. Since then I've hardened infrastructure with Terraform and secured container orchestration on ECS, EKS, and Kubernetes.",
 
   skills: {
     "Security & Networking": [
@@ -80,9 +80,9 @@ const resumeDataSecurity = {
       location: "Remote",
       date: "2024 - March 2026",
       bullets: [
-        "Rolled out 6 agentic coding tools across engineering with security guardrails: scoped permissions, secret-filtering shim layers, and sandboxed execution environments.",
-        "Built an isolated cloud dev environment where engineers spin up resources like PostgreSQL with one click. Enforced per-environment IAM boundaries so dev resources cannot reach production data.",
-        "Built a cross-tool shim layer that enforces engineering security practices (secret scanning, dependency policies) uniformly across all agentic coding tools.",
+        "Rolled out 6 agentic coding tools across engineering, each behind the same guardrails: scoped permissions, secret-filtering shim layers, and sandboxed execution.",
+        "Built an isolated cloud dev environment where engineers spin up resources like PostgreSQL with one click. Per-environment IAM boundaries keep dev resources away from production data.",
+        "Built a cross-tool shim layer that applies our security practices (secret scanning, dependency policies) the same way across every agentic coding tool.",
       ],
     },
     {
@@ -91,13 +91,13 @@ const resumeDataSecurity = {
       location: "Remote",
       date: "2020 - 2024",
       bullets: [
-        "Built Thumbtack's service mesh using Envoy and go-control-plane, enabling mTLS for all inter-service communication. Services authenticate each other cryptographically, eliminating plaintext traffic within the cluster.",
-        "Configured AWS WAF and AWS Shield to protect Thumbtack's API layer -- HTTP/REST endpoints and GraphQL -- blocking injection attacks, rate-limit abuse, and DDoS attempts before they reach application code.",
-        "Designed and implemented AWS VPC architecture with strict security group rules enforcing least-privilege network access. ECS services run with tightly scoped IAM task roles limiting access to only the AWS resources each service requires.",
+        "Built Thumbtack's service mesh with Envoy and go-control-plane, which put mTLS on all inter-service communication. Services authenticate each other cryptographically, so no plaintext traffic moves inside the cluster.",
+        "Configured AWS WAF and AWS Shield in front of Thumbtack's API layer, covering both the HTTP/REST endpoints and GraphQL. Injection attempts, rate-limit abuse, and DDoS traffic get blocked before they reach application code.",
+        "Designed and implemented the AWS VPC architecture, with security group rules that keep network access least-privilege. ECS services run under scoped IAM task roles that reach only the AWS resources each one actually needs.",
         "Created and maintained AWS IAM profiles in Terraform for both machine roles (service accounts, CI/CD pipelines) and human roles across engineering, data, and business departments. Enforced least-privilege and MFA policies.",
-        "Set up AWS PrivateLink for secure, private connectivity to third-party cloud providers (no traffic over the public internet) and configured VPC Endpoint Services for controlled inbound access from partners into Thumbtack's infrastructure.",
-        "Led zero-downtime migration of Thumbtack's most critical data store from self-hosted EC2 PostgreSQL to Aurora with encrypted storage and in-transit TLS. Coordinated bidirectional replication through AWS DMS without exposing data outside the VPC.",
-        "Set up multi-cloud infrastructure across AWS and GCP with Terraform and Puppet, enforcing consistent security policies across both clouds. Cut costs 35% while bringing disaster recovery from hours to minutes.",
+        "Set up AWS PrivateLink for private connectivity to third-party cloud providers, so none of that traffic crossed the public internet. Configured VPC Endpoint Services for controlled inbound access from partners into Thumbtack's infrastructure.",
+        "Led zero-downtime migration of Thumbtack's most critical data store from self-hosted EC2 PostgreSQL to Aurora, with encrypted storage and TLS in transit. Coordinated bidirectional replication through AWS DMS, and the data never left the VPC.",
+        "Set up multi-cloud infrastructure across AWS and GCP with Terraform and Puppet, applying the same security policies on both. Cut costs 35% and brought disaster recovery from hours to minutes.",
       ],
     },
     {
@@ -106,11 +106,11 @@ const resumeDataSecurity = {
       location: "San Francisco, CA",
       date: "2018 - 2020",
       bullets: [
-        "Architected service mesh using Envoy so engineers could spin up network-isolated instances of their microservices in dev/staging, enforcing the same mTLS and access policies as production.",
-        "Led the microservices migration of the Users service from the PHP monolith to Golang, establishing service-level authentication and authorization boundaries.",
-        "Built Golang service frameworks with built-in security middleware (auth token validation, request signing, rate limiting) adopted across Thumbtack's microservice fleet.",
-        "Built Thumbtack's real-time streaming infrastructure on self-managed ECS with Kafka Connect, securing CDC event pipelines with encrypted connections from Aurora WAL to BigQuery.",
-        "Migrated a high QPS service (5k+ TCP calls/sec) with near-zero downtime (<50ms). Connection security maintained throughout with no fallback to unencrypted channels.",
+        "Architected service mesh using Envoy so engineers could spin up network-isolated instances of their microservices in dev/staging, under the same mTLS and access policies as production.",
+        "Led the microservices migration of the Users service from the PHP monolith to Golang, and drew the service-level authentication and authorization boundaries in the process.",
+        "Built Golang service frameworks with security middleware baked in (auth token validation, request signing, rate limiting), adopted across Thumbtack's microservice fleet.",
+        "Built Thumbtack's real-time streaming infrastructure on self-managed ECS with Kafka Connect. CDC events travel over encrypted connections from the Aurora WAL to BigQuery.",
+        "Migrated a high QPS service (5k+ TCP calls/sec) with near-zero downtime (<50ms), and no connection fell back to an unencrypted channel during the cutover.",
       ],
     },
     {
@@ -119,9 +119,9 @@ const resumeDataSecurity = {
       location: "San Ramon, CA",
       date: "2016 - 2018",
       bullets: [
-        "Developed bootstrapping installation scripts in Chef deploying dockerized microservices to edge VMs, with communication secured through MQTT with TLS and certificate-based device authentication.",
-        "Designed edge-to-cloud real-time ingestion for CDC datasets from SQL Server with encrypted transit and access-controlled cloud endpoints.",
-        "Built resiliency in Efficiency Analyzer Application using the circuit breaker pattern with Netflix Hystrix, preventing cascading failures from compromising service availability.",
+        "Wrote Chef bootstrapping scripts that deployed dockerized microservices to edge VMs. Those VMs talked to the cloud over MQTT with TLS and certificate-based device authentication.",
+        "Designed edge-to-cloud real-time ingestion for CDC datasets from SQL Server, with encrypted transit and access-controlled cloud endpoints.",
+        "Built resiliency into the Efficiency Analyzer Application using the circuit breaker pattern with Netflix Hystrix, so one failing dependency could not take the service down with it.",
       ],
     },
     {
@@ -130,7 +130,7 @@ const resumeDataSecurity = {
       location: "New York",
       date: "2016",
       bullets: [
-        "Built a Spring Web Application for customer service representatives to service loan account requests, working within American Express's strict financial security and compliance requirements.",
+        "Built a Spring Web Application for customer service representatives to service loan account requests, under American Express's financial security and compliance requirements.",
         "Contributed to the breakdown of monolithic architecture into microservices, establishing service boundaries aligned with PCI-DSS data isolation requirements.",
       ],
     },
@@ -140,11 +140,11 @@ const resumeDataSecurity = {
       location: "Dallas, TX",
       date: "2014 - 2016",
       bullets: [
-        "Integrated SAML SSO into the security analytics platform, enabling federated identity and single sign-on across customer deployments.",
-        "Implemented clustering algorithm to identify beaconing behavior of network endpoints, detecting command-and-control communication patterns for threat hunting.",
-        "Designed and developed a Grails application for simulating real-time log feeds of different SIEM solutions (Splunk, ArcSight, QRadar) for security analyst training and product testing.",
-        "Created a framework in Java for programmatic Spark job submissions in YARN cluster mode in fully kerberized environments, maintaining secure authentication chains for distributed security analytics workloads.",
-        "Implemented WebSocket capability for low-latency updates on security dashboards, enabling real-time threat visibility.",
+        "Integrated SAML SSO into the security analytics platform so customers could use federated identity and single sign-on across their deployments.",
+        "Implemented a clustering algorithm that flagged beaconing behavior on network endpoints, the pattern threat hunters look for in command-and-control traffic.",
+        "Designed and developed a Grails application that simulated real-time log feeds from different SIEM solutions (Splunk, ArcSight, QRadar) for security analyst training and product testing.",
+        "Created a framework in Java for programmatic Spark job submissions in YARN cluster mode in fully kerberized environments, so distributed analytics jobs kept a valid authentication chain.",
+        "Implemented WebSocket updates so security dashboards refreshed with low latency.",
       ],
     },
     {
@@ -154,8 +154,8 @@ const resumeDataSecurity = {
       date: "Apr 2010 - Aug 2011",
       hideInPrint: true,
       bullets: [
-        "Led end-to-end development of a crowdsourced recommendation engine for local deals, helping consumers discover the best prices and recommendations from real users for big-ticket purchases.",
-        "Architected and built the web platform using Python (Django) and PHP (Drupal), handling backend development, database design, and API integrations with security best practices.",
+        "Led development of a crowdsourced recommendation engine for local deals, where shoppers compared prices and read recommendations from real buyers before big-ticket purchases.",
+        "Architected and built the web platform using Python (Django) and PHP (Drupal), handling backend development, database design, and API integrations.",
         "Developed Android mobile applications to extend the platform to mobile users.",
         "Managed a small team of developers, overseeing code reviews, sprint planning, and product delivery.",
         "Handled client relationships, vendor negotiations, and go-to-market strategy.",
@@ -170,7 +170,7 @@ const resumeDataSecurity = {
       bullets: [
         "Trained in Java and .NET at Infosys Mysore campus, then posted to the Pune delivery center.",
         "Developed Java/J2EE applications for the Telstra Digital Transformation project, an Australian enterprise client modernizing their customer-facing web platforms.",
-        "Deployed applications on JBoss Web Server and Tomcat application servers in a production environment, implementing access controls and secure deployment practices.",
+        "Deployed applications on JBoss Web Server and Tomcat in production, and set up the access controls around those deployments.",
         "Collaborated with offshore and onshore teams following Infosys's structured delivery methodology.",
       ],
     },

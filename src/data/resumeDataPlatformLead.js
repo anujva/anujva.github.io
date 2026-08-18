@@ -9,7 +9,7 @@ const resumeDataPlatformLead = {
   github: "github.com/anujva",
 
   summary:
-    "Engineering leader with 15+ years delivering full-stack platforms end-to-end, from frontend applications to backend services to production infrastructure. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Career spans enterprise digital transformation (Telstra at Infosys), security analytics platforms (Securonix SIEM), financial services (American Express CLP), industrial IoT (GE Predix), and marketplace infrastructure (Thumbtack).\n\nRebuilt Thumbtack's SRE team from 1 remaining engineer to 8+, owning the hiring pipeline, interview loop design, team charter, and multi-cloud platform roadmap, reporting to the Director of Engineering and collaborating closely with the SVP of Engineering. Hands-on across the stack: React and Grails frontends, Golang and Java backends, Kafka streaming pipelines, and AWS/GCP infrastructure-as-code.\n\nLed compliance initiatives across PCI-DSS, SOC2, and CCPA: implemented audit logging systems, configured AWS CloudTrail across 5 accounts, coordinated cross-team data deletion pipelines spanning AWS and BigQuery on GCP, and provided technical evidence during auditor engagements. Awarded PCI Champion 2023. Built and shipped an application-layer firewall overnight to stop a credential-stuffing attack that AWS WAF and Shield could not block. Most recently delivering AI-powered developer platforms with full-stack ownership from LLM orchestration to React frontend to Slack integration.",
+    "Engineering leader with 15+ years building full-stack platforms: the frontend applications, the backend services behind them, and the production infrastructure they run on. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Since then I've worked in enterprise digital transformation (Telstra at Infosys), security analytics (Securonix SIEM), financial services (American Express CLP), industrial IoT (GE Predix), and marketplace infrastructure (Thumbtack).\n\nRebuilt Thumbtack's SRE team from 1 remaining engineer to 8+. I owned the hiring pipeline, the interview loop design, the team charter, and the multi-cloud platform roadmap, reported to the Director of Engineering, and worked closely with the SVP of Engineering. I stayed hands-on through all of it: React and Grails frontends, Golang and Java backends, Kafka streaming pipelines, and AWS/GCP infrastructure-as-code.\n\nLed compliance work across PCI-DSS, SOC2, and CCPA: built audit logging systems, configured AWS CloudTrail across 5 accounts, coordinated cross-team data deletion pipelines spanning AWS and BigQuery on GCP, and walked auditors through the technical evidence. Awarded PCI Champion 2023. Wrote and shipped an application-layer firewall overnight to stop a credential-stuffing attack that AWS WAF and Shield could not block. Most recently I've been building AI-powered developer platforms, again on the whole stack: LLM orchestration, the React frontend, the Slack integration.",
 
   skills: {
     "Leadership & Delivery": [
@@ -71,10 +71,10 @@ const resumeDataPlatformLead = {
       location: "Remote",
       date: "2024 - March 2026",
       bullets: [
-        "Delivered an AI-powered platform across Slack and web UI for cross-codebase Q&A, automated code reviews, and change request creation, with full-stack ownership from LLM orchestration and RAG indexing to React frontend and Slack integration.",
+        "Delivered an AI platform in Slack and the web UI for cross-codebase Q&A, automated code reviews, and change request creation. I built the whole thing: LLM orchestration, RAG indexing, the React frontend, and the Slack integration.",
         "Rolled out 6 agentic coding tools (GitHub Copilot Agents, Claude Code, OpenCode, and others) across 100+ engineers. Designed the evaluation framework, led vendor selection, and hit 96% developer adoption in the first rollout cycle.",
-        "Built a cross-tool shim layer that translates engineering best practices into configuration for all agentic tools uniformly: a single authoring surface with consistent enforcement across the fleet.",
-        "Shipped an isolated cloud development environment platform with a self-service frontend: engineers spin up PostgreSQL instances, get shareable demo URLs, and tear down with one click. Cut environment setup from days to minutes; feature demo frequency went up 40%.",
+        "Built a cross-tool shim layer that turns engineering best practices into configuration for every agentic tool, so a practice gets written once instead of once per tool.",
+        "Shipped an isolated cloud development environment platform with a self-service frontend: engineers spin up PostgreSQL instances, get shareable demo URLs, and tear the whole thing down with one click. Cut environment setup from days to minutes; feature demo frequency went up 40%.",
       ],
     },
     {
@@ -83,14 +83,14 @@ const resumeDataPlatformLead = {
       location: "Remote",
       date: "2020 - 2024",
       bullets: [
-        "Rebuilt Thumbtack's SRE team from 1 remaining engineer to 8+. Designed the interview loops, defined the team charter and multi-cloud platform roadmap, and led hiring over 5 years, reporting to Director and collaborating closely with the SVP of Engineering.",
-        "Led PCI-DSS compliance across Thumbtack's infrastructure: implemented audit logging for Linux servers, configured AWS CloudTrail across 5 AWS accounts, answered auditor questionnaires with technical evidence, and hardened infrastructure to meet controls. Awarded PCI Champion 2023.",
+        "Rebuilt Thumbtack's SRE team from 1 remaining engineer to 8+. Designed the interview loops, defined the team charter and the multi-cloud platform roadmap, and led hiring over 5 years. Reported to the Director of Engineering and worked closely with the SVP of Engineering.",
+        "Led PCI-DSS compliance across Thumbtack's infrastructure: built audit logging for Linux servers, configured AWS CloudTrail across 5 AWS accounts, answered auditor questionnaires with technical evidence, and hardened infrastructure to meet the controls. Awarded PCI Champion 2023.",
         "Built and shipped 'BadBotBlocker', an application-layer firewall on top of Nginx reverse proxy infrastructure, overnight during an active credential-stuffing attack that was evading AWS WAF and Shield. Stopped the attack within hours.",
         "Delivered zero-downtime migration of Thumbtack's most critical data store from self-hosted EC2 PostgreSQL to Aurora. Coordinated bidirectional replication through AWS DMS and upgraded client libraries across PHP, Golang, Python, and Scala services.",
-        "Built a custom Envoy control plane (go-control-plane + ECS sidecars) powering Cloud Development Environments with full request isolation via routing labels. Zero duplicate infrastructure, zero application code changes.",
+        "Built a custom Envoy control plane (go-control-plane + ECS sidecars) powering Cloud Development Environments, where routing labels give each engineer full request isolation. It needed no duplicate infrastructure and no changes to application code.",
         "Owned multi-cloud infrastructure across AWS and GCP with Terraform and Puppet. Cut costs 35% and brought disaster recovery response time from hours to minutes.",
-        "Supported SOC2 compliance by maintaining audit trails, enforcing least-privilege IAM policies, and providing technical evidence during audit cycles.",
-        "Led CCPA (California Consumer Privacy Act) compliance effort, coordinating with the Data Services team to build the system to purge user records from online systems in AWS through to the data lake in BigQuery on GCP, all within 30 days of a deletion request.",
+        "Supported SOC2 compliance: maintained the audit trails, kept IAM policies least-privilege, and produced technical evidence during audit cycles.",
+        "Led the CCPA (California Consumer Privacy Act) compliance effort. Worked with the Data Services team to build the system that purges user records from the online systems in AWS through to the data lake in BigQuery on GCP, all within 30 days of a deletion request.",
       ],
     },
     {
@@ -101,7 +101,7 @@ const resumeDataPlatformLead = {
       bullets: [
         "Led full-stack microservices migration of the Users service from the PHP monolith to Golang. Designed the API surface, built the backend, and coordinated frontend integration across consumer and pro experiences.",
         "Built Golang service frameworks with built-in middleware (auth, rate limiting, observability) adopted across Thumbtack's 40+ microservice fleet.",
-        "Delivered Thumbtack's real-time streaming infrastructure end-to-end: Kafka Connect on self-managed ECS capturing CDC events from Aurora WAL, writing to BigQuery in real time for analytics and compliance audit trails.",
+        "Built Thumbtack's real-time streaming infrastructure: Kafka Connect on self-managed ECS captures CDC events from the Aurora WAL and writes them to BigQuery in real time for analytics and compliance audit trails.",
         "Dropped latency on a critical findUsers API from 500+ms to 30ms p99. Application responsiveness improved 15%, user engagement went up 22%.",
         "Wrote a load testing tool in Go that cut test implementation time by 70% and surfaced bottlenecks leading to 40% higher system throughput.",
       ],
@@ -112,10 +112,10 @@ const resumeDataPlatformLead = {
       location: "San Ramon, CA",
       date: "2016 - 2018",
       bullets: [
-        "Delivered edge-to-cloud platform features end-to-end: Chef-based bootstrapping of dockerized microservices on edge VMs, MQTT-secured communication to cloud, and real-time CDC ingestion from SQL Server.",
-        "Improved initial data ingestion for 25GB datasets from 8-12 hours to under 1 hour by implementing compression and byte serialization, directly enabling faster onboarding of industrial customers.",
-        "Built resiliency into the Efficiency Analyzer Application using circuit breaker patterns (Netflix Hystrix), preventing cascading failures across the GE Predix platform.",
-        "Introduced feature flag-driven trunk-based development using FF4J, enabling the team to ship to production continuously without long-lived branches.",
+        "Delivered edge-to-cloud platform features: Chef-based bootstrapping of dockerized microservices on edge VMs, MQTT-secured communication back to the cloud, and real-time CDC ingestion from SQL Server.",
+        "Improved initial data ingestion for 25GB datasets from 8-12 hours to under 1 hour with compression and byte serialization, which meant industrial customers got onboarded faster.",
+        "Built resiliency into the Efficiency Analyzer Application using circuit breaker patterns (Netflix Hystrix), so a single failure did not cascade across the GE Predix platform.",
+        "Introduced feature-flag-driven trunk-based development with FF4J. The team could ship to production continuously instead of maintaining long-lived branches.",
       ],
     },
     {
@@ -136,11 +136,11 @@ const resumeDataPlatformLead = {
       location: "Dallas, TX",
       date: "2014 - 2016",
       bullets: [
-        "Delivered full-stack features on the Securonix SIEM platform: Grails backend with JavaScript/jQuery frontend for security analytics dashboards used by enterprise SOC teams to detect and investigate threats.",
-        "Built the Log Simulator, a full-stack application with a configuration frontend and statistical simulation backend that generated realistic log streams mimicking compliance systems (DLP, IAM, endpoint protection) at configurable rates. Used company-wide to test the SIEM platform against simulated security scenarios including data exfiltration and insider threats.",
-        "Integrated SAML SSO for federated identity across customer deployments. Implemented WebSocket-based real-time updates for security dashboards.",
-        "Implemented clustering algorithms for beaconing detection, identifying command-and-control communication patterns for threat hunting.",
-        "Built a framework for programmatic Spark job submissions in fully kerberized YARN clusters, enabling distributed security analytics at scale.",
+        "Built full-stack features on the Securonix SIEM platform: a Grails backend with a JavaScript/jQuery frontend for the security analytics dashboards enterprise SOC teams used to detect and investigate threats.",
+        "Built the Log Simulator, a full-stack application with a configuration frontend and a statistical simulation backend that generated realistic log streams from compliance systems (DLP, IAM, endpoint protection) at configurable rates. Teams across the company used it to test the SIEM platform against scenarios like data exfiltration and insider threats.",
+        "Integrated SAML SSO for federated identity across customer deployments, and added WebSocket-based real-time updates to the security dashboards.",
+        "Implemented clustering algorithms for beaconing detection, which surfaced the command-and-control communication patterns threat hunters chase.",
+        "Built a framework for programmatic Spark job submissions in fully kerberized YARN clusters, so security analytics could run distributed at scale.",
       ],
     },
     {
