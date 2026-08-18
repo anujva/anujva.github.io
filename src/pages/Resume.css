@@ -394,10 +394,15 @@
 /*
  * Tip: In the browser print dialog, uncheck "Headers and footers"
  * to remove the date / URL / page-number chrome the browser adds.
+ *
+ * The print layout mirrors the site: navy sidebar column on the left,
+ * main content on the right. The sidebar grid item stretches to the full
+ * grid height, so its background paints down every page. Per-variant
+ * min-heights on .resume-paper round the document up to whole pages.
  */
 @page {
   size: letter;
-  margin: 0.4in 0 0.35in 0;
+  margin: 0.3in 0.32in;
 }
 
 @media print {
@@ -438,16 +443,16 @@
     background: white !important;
   }
 
-  /* Reset page wrapper */
   .resume-page {
     padding: 0;
     max-width: none;
     animation: none;
   }
 
-  /* Single-column flow for clean pagination */
+  /* Two-column paper, same structure as on screen */
   .resume-paper {
-    display: block;
+    display: grid;
+    grid-template-columns: 2.3in 1fr;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -455,166 +460,185 @@
     background: white;
   }
 
-  /* ---- Sidebar -> compact header banner ---- */
+  .hide-in-print {
+    display: none !important;
+  }
+
+  /* ---- Sidebar column ---- */
   .resume-sidebar {
-    background: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    padding: 0.35in 0.5in 0.3in;
+    padding: 0.28in 0.2in;
   }
 
   .sidebar-header {
-    margin-bottom: 0.35rem;
-    padding-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.65rem;
   }
 
   .sidebar-name {
     font-size: 1.35rem;
-    margin-bottom: 0.1rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
   }
 
   .sidebar-title {
-    font-size: 0.78rem;
-  }
-
-  /* Contact: single horizontal row */
-  .contact-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.1rem 1rem;
-  }
-
-  .contact-item {
-    flex-direction: row;
-    gap: 0.25rem;
-    align-items: baseline;
-  }
-
-  .contact-label {
-    font-size: 0.58rem;
-  }
-
-  .contact-item span:last-child {
     font-size: 0.7rem;
+    line-height: 1.4;
   }
 
-  /* Sidebar sections: tight */
   .sidebar-section {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.8rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .sidebar-heading {
-    font-size: 0.62rem;
+    font-size: 0.58rem;
     letter-spacing: 1.2px;
-    margin-bottom: 0.25rem;
-    padding-bottom: 0.15rem;
+    margin-bottom: 0.45rem;
+    padding-bottom: 0.25rem;
   }
 
-  /* Skills: inline layout */
-  .sidebar-section:has(.skill-group) {
-    display: grid;
-    grid-template-columns: 1fr;
+  .contact-list {
+    gap: 0.35rem;
   }
 
-  .sidebar-section:has(.skill-group) .sidebar-heading {
-    grid-column: 1 / -1;
+  .contact-label {
+    font-size: 0.52rem;
   }
 
-  .sidebar-section:has(.skill-group) .skill-group {
-    display: inline;
+  .contact-item span:last-child {
+    font-size: 0.62rem;
+    word-break: break-word;
+  }
+
+  /* Education already appears in the main column; drop the sidebar copy
+     so the whole sidebar fits on page 1 */
+  .resume-sidebar .sidebar-section:has(.edu-item-sidebar) {
+    display: none;
   }
 
   .skill-group {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
   }
 
   .skill-category-title {
     font-size: 0.6rem;
-    margin-bottom: 0.1rem;
-    display: inline;
-    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
   }
 
   .skill-tags {
-    display: inline;
+    gap: 0.18rem;
   }
 
   .skill-tag {
     font-size: 0.56rem;
-    padding: 0.08rem 0.32rem;
-    display: inline;
-    margin: 0 0.12rem 0.15rem 0;
+    padding: 0.1rem 0.32rem;
     border-radius: 4px;
   }
 
-  /* Languages: inline */
   .language-item {
-    display: inline-flex;
-    gap: 0.2rem;
-    margin-right: 0.75rem;
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
   }
 
   .language-name {
-    font-size: 0.7rem;
+    font-size: 0.66rem;
   }
 
   .language-level {
-    font-size: 0.6rem;
-  }
-
-  /* Education: compact, side-by-side */
-  .edu-item-sidebar {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 1.5rem;
-    vertical-align: top;
-  }
-
-  .edu-degree-sidebar {
-    font-size: 0.68rem;
-    margin-bottom: 0;
-  }
-
-  .edu-school-sidebar {
-    font-size: 0.62rem;
-  }
-
-  .edu-date-sidebar {
     font-size: 0.58rem;
   }
 
-  /* ---- Main content ---- */
+  .edu-item-sidebar {
+    margin-bottom: 0.55rem;
+  }
+
+  .edu-degree-sidebar {
+    font-size: 0.64rem;
+  }
+
+  .edu-school-sidebar {
+    font-size: 0.6rem;
+  }
+
+  .edu-date-sidebar {
+    font-size: 0.56rem;
+  }
+
+  /* ---- Main column ---- */
   .resume-main {
-    padding: 0.4in 0.5in 0.3in;
+    padding: 0.28in 0 0.1in 0.28in;
   }
 
   .main-section {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .section-title {
-    font-size: 0.78rem;
-    margin-bottom: 0.35rem;
-    padding-bottom: 0.2rem;
+    font-size: 0.76rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.28rem;
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .section-icon {
+    font-size: 0.5rem;
   }
 
   .profile-text {
-    font-size: 0.75rem;
-    line-height: 1.45;
+    font-size: 0.74rem;
+    line-height: 1.55;
   }
 
-  /* Job entries */
+  .profile-text p {
+    margin-bottom: 0.4rem;
+  }
+
+  .education-section {
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .edu-entry {
+    margin-bottom: 0.55rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .edu-header {
+    margin-bottom: 0.1rem;
+  }
+
+  .edu-degree {
+    font-size: 0.78rem;
+    margin-bottom: 0.08rem;
+  }
+
+  .edu-school {
+    font-size: 0.7rem;
+  }
+
+  .edu-date {
+    font-size: 0.64rem;
+  }
+
+  .edu-details {
+    font-size: 0.66rem;
+    margin-top: 0.1rem;
+  }
+
   .job-entry {
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.4rem;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.5rem;
   }
 
   .job-header {
-    page-break-after: avoid;
     break-after: avoid;
-    margin-bottom: 0.2rem;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 0.25rem;
   }
 
   .job-title {
@@ -626,158 +650,56 @@
   }
 
   .job-date {
-    font-size: 0.65rem;
-  }
-
-  .job-bullets {
-    padding-left: 0.9rem;
-  }
-
-  .job-bullets li {
-    font-size: 0.7rem;
-    line-height: 1.4;
-    margin-bottom: 0.15rem;
-  }
-}
-
-/* ========== Platform Lead: print overrides ========== */
-/*
- * The Platform Lead variant has more content than the others.
- * These overrides relax the compressed print layout and let content
- * flow continuously so pages fill evenly without forced breaks.
- */
-@media print {
-  .resume-paper[data-variant="platform-lead"] .resume-sidebar {
-    padding: 0.3in 0.5in 0.25in;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .sidebar-name {
-    font-size: 1.4rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .sidebar-title {
-    font-size: 0.82rem;
-  }
-
-  /* Slightly more generous skill tags */
-  .resume-paper[data-variant="platform-lead"] .skill-tag {
-    font-size: 0.6rem;
-    padding: 0.1rem 0.38rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .skill-category-title {
     font-size: 0.64rem;
   }
 
-  /* Eliminate trailing space that can push a blank 4th page */
+  .job-bullets {
+    padding-left: 0.95rem;
+  }
+
+  .job-bullets li {
+    font-size: 0.71rem;
+    line-height: 1.48;
+    margin-bottom: 0.22rem;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /*
+   * Whole-page fill: each page's printable area is 10.4in
+   * (11in letter minus 0.3in top and bottom margins). The min-height
+   * rounds each variant up to full pages so the navy sidebar runs to
+   * the bottom of the last page (set slightly under the exact multiple
+   * to avoid spilling a blank page). The per-variant zoom on the main
+   * column stretches or squeezes content so the last page ends close
+   * to the bottom. Retune both together when resume content changes.
+   */
+  .resume-paper[data-variant="general"] {
+    min-height: 30.9in; /* 3 full pages */
+  }
+
+  .resume-paper[data-variant="general"] .resume-main {
+    zoom: 1.02;
+  }
+
+  .resume-paper[data-variant="security"] {
+    min-height: 20.5in; /* 2 full pages */
+  }
+
+  .resume-paper[data-variant="security"] .resume-main {
+    zoom: 0.94;
+  }
+
+  .resume-paper[data-variant="platform-lead"] {
+    min-height: 30.9in; /* 3 full pages */
+  }
+
   .resume-paper[data-variant="platform-lead"] .resume-main {
-    padding: 0.4in 0.5in 0;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-entry:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .profile-text {
-    font-size: 0.76rem;
-    line-height: 1.45;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .main-section {
-    margin-bottom: 0.65rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .section-title {
-    font-size: 0.82rem;
-    margin-bottom: 0.45rem;
-    padding-bottom: 0.25rem;
-  }
-
-  /* Job entries: allow splitting across pages so content flows without gaps */
-  .resume-paper[data-variant="platform-lead"] .job-entry {
-    break-inside: auto;
-    page-break-inside: auto;
-    margin-bottom: 0.65rem;
-    padding-bottom: 0.55rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-header {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    break-after: auto;
-    page-break-after: auto;
-    margin-bottom: 0.3rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-title {
-    font-size: 0.82rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-company {
-    font-size: 0.74rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-date {
-    font-size: 0.68rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-bullets li {
-    font-size: 0.74rem;
-    line-height: 1.45;
-    margin-bottom: 0.2rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .job-bullets {
-    padding-left: 1rem;
-  }
-
-  /* Education section in main content */
-  .edu-entry {
-    margin-bottom: 0.75rem;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .edu-header {
-    margin-bottom: 0.15rem;
-  }
-
-  .edu-degree {
-    font-size: 0.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .edu-school {
-    font-size: 0.8rem;
-  }
-
-  .edu-date {
-    font-size: 0.72rem;
-  }
-
-  .edu-details {
-    font-size: 0.75rem;
-    margin-top: 0.15rem;
-  }
-
-  /* Hide entries flagged with hideInPrint */
-  .hide-in-print {
-    display: none !important;
-  }
-
-  /* Profile paragraphs spacing */
-  .resume-paper[data-variant="platform-lead"] .profile-text p {
-    margin-bottom: 0.35rem;
-  }
-
-  .resume-paper[data-variant="platform-lead"] .profile-text p:last-child {
-    margin-bottom: 0;
+    zoom: 1.08;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .resume-page {
     padding: 1.5rem 1rem 3rem;
   }
