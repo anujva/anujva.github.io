@@ -9,7 +9,7 @@ const resumeDataSecurity = {
   github: "github.com/anujva",
 
   summary:
-    "Engineering leader with 15+ years building secure distributed systems and cloud infrastructure, currently Executive Director at Wissen Technology leading platform engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, which is where most of the security work sat: mTLS across the service mesh, WAF and Shield in front of the API layer, least-privilege IAM, VPC segmentation, and PrivateLink for partner connectivity. Earlier in my career I worked on SIEM security analytics at Securonix. Since then I've hardened infrastructure with Terraform and secured container orchestration on ECS, EKS, and Kubernetes.",
+    "Engineering leader with 15+ years building secure distributed systems and cloud infrastructure, currently Executive Director at Wissen Technology leading Platform Engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, which is where most of the security work sat: mTLS across the service mesh, WAF and Shield in front of the API layer, least-privilege IAM, VPC segmentation, and PrivateLink for partner connectivity. Earlier in my career I worked on SIEM security analytics at Securonix. Since then I've hardened infrastructure with Terraform and secured container orchestration on ECS, EKS, and Kubernetes.",
 
   skills: {
     "Security & Networking": [
@@ -71,7 +71,10 @@ const resumeDataSecurity = {
       location: "Mumbai Metropolitan Area",
       date: "2026 - Present",
       bullets: [
-        "Leading platform engineering for Wissen's product platform: multi-account AWS landing zone vended through OpenTofu, immutable infrastructure with Packer-built golden AMIs, and HashiCorp Nomad for workload orchestration.",
+        "Leading Platform Engineering for Wissen's product platform: multi-account AWS landing zone vended through OpenTofu, immutable infrastructure with Packer-built golden AMIs, and HashiCorp Nomad for workload orchestration.",
+        "Rolled out a Consul service mesh with default-deny ACLs and mTLS: services need explicit intentions to talk, and nothing on the east-west path is plaintext.",
+        "Hardened the self-hosted git forge: SSH only through an SSM tunnel (no public port 22), credentials rotated via Secrets Manager, CI on ephemeral per-job VMs so no build state survives a job.",
+        "Built the platform SDK to resolve secrets at deploy time (never in rendered config) and reject unpinned image tags; standardized invite-only passkey auth across internal apps.",
       ],
     },
     {

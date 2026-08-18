@@ -9,7 +9,7 @@ const resumeData = {
   github: "github.com/anujva",
 
   summary:
-    "Engineering leader with 15+ years building distributed systems and platform infrastructure, currently Executive Director at Wissen Technology leading platform engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
+    "Engineering leader with 15+ years building distributed systems and platform infrastructure, currently Executive Director at Wissen Technology leading Platform Engineering. Started career at Infosys on the Telstra Digital Transformation project, then co-founded a startup building a crowdsourced recommendation platform for local deals. Got promoted to Staff as SRE Tech Lead owning Thumbtack's AWS and GCP infrastructure, then moved over to lead AI-driven developer productivity. I've spent most of my career on cloud infrastructure, service meshes, container orchestration frameworks like ECS, EKS, Kubernetes and Nomad, real-time data pipelines, and more recently agentic AI tooling.",
 
   skills: {
     "Programming Languages": [
@@ -66,7 +66,11 @@ const resumeData = {
       location: "Mumbai Metropolitan Area",
       date: "2026 - Present",
       bullets: [
-        "Leading platform engineering for Wissen's product platform: multi-account AWS landing zone vended through OpenTofu, immutable infrastructure with Packer-built golden AMIs, and HashiCorp Nomad for workload orchestration.",
+        "Leading Platform Engineering for Wissen's product platform: multi-account AWS landing zone vended through OpenTofu, immutable infrastructure with Packer-built golden AMIs, and HashiCorp Nomad for workload orchestration.",
+        "Built a Go CLI that renders a single wissen.yaml manifest into Nomad jobs, Consul intentions, and CI deploy workflows. Every internal service deploys through it, no hand-written HCL.",
+        "Rolled out a Consul service mesh in phases: default-deny ACLs, mTLS, Connect sidecars for east-west traffic, and public ingress through an API gateway at the edge.",
+        "Stood up self-hosted Forgejo CI on ephemeral VM-per-job runners managed by scaler and reaper Lambdas. The whole platform runs under a $500/month AWS budget.",
+        "Deployed Airflow 3 as four mesh-connected Nomad workloads, OpenObserve observability fed by node-level OpenTelemetry collectors, and internal Go products (engagement tracker, lead-capture tool with Bedrock briefings, interview console) behind passkey auth.",
       ],
     },
     {
